@@ -5,7 +5,7 @@ Leading the Enterprise AI Office
 
 مسار التنفيذيين والقادة · أكاديمية سدايا · LDS-EXE-401 · المستوى 400
 
-REPLACE: سطر واحد تحت العنوان: ما يستطيع المشارك فعله بعد المقرر
+تقود مكتب الذكاء الاصطناعي بخطة واحدة: خارطة طريق بموازنة، ومحفظة تموّل ما يثبت قيمته، وحوكمة للأدوات والوكلاء، واستجابة للحوادث لكل خطر فيها مالك مسمّى
 
 برنامج للدفعات موجه إلى المسؤول الذي يدير مكتب الذكاء الاصطناعي في جهته أو سيديره. يكتب المشاركون كل أسبوع قسمًا من خطة المكتب لجهتهم أو لجهة افتراضية، من خارطة الطريق والتفويض إلى حوكمة الوكلاء والإلمام والحوادث ومجلس الإدارة. وتُبقي المختبرات القادة على تماس تطبيقي: يبنون مسار عمل وكيليًا صغيرًا ويقيسونه، ويشاركون في محاكاة للمحفظة وللحوادث.
 
@@ -31,17 +31,17 @@ REPLACE: سطر واحد تحت العنوان: ما يستطيع المشارك
 
 | الوحدة | العنوان | الجلسات | الشرائح |
 |---|---|---|---|
-| الأسبوع 1 | REPLACE: موضوع هذه الوحدة في كلمات قليلة | REPLACE: عنوان الجلسة 1 | [`slides/week1.html`](slides/week1.html) |
-| الأسبوع 2 | REPLACE: موضوع هذه الوحدة في كلمات قليلة | REPLACE: عنوان الجلسة 1 | [`slides/week2.html`](slides/week2.html) |
-| الأسبوع 3 | REPLACE: موضوع هذه الوحدة في كلمات قليلة | REPLACE: عنوان الجلسة 1 | [`slides/week3.html`](slides/week3.html) |
-| الأسبوع 4 | REPLACE: موضوع هذه الوحدة في كلمات قليلة | REPLACE: عنوان الجلسة 1 | [`slides/week4.html`](slides/week4.html) |
-| الأسبوع 5 | REPLACE: موضوع هذه الوحدة في كلمات قليلة | REPLACE: عنوان الجلسة 1 | [`slides/week5.html`](slides/week5.html) |
-| الأسبوع 6 | REPLACE: موضوع هذه الوحدة في كلمات قليلة | REPLACE: عنوان الجلسة 1 | [`slides/week6.html`](slides/week6.html) |
-| الأسبوع 7 | REPLACE: موضوع هذه الوحدة في كلمات قليلة | REPLACE: عنوان الجلسة 1 | [`slides/week7.html`](slides/week7.html) |
-| الأسبوع 8 | REPLACE: موضوع هذه الوحدة في كلمات قليلة | REPLACE: عنوان الجلسة 1 | [`slides/week8.html`](slides/week8.html) |
-| الأسبوع 9 | REPLACE: موضوع هذه الوحدة في كلمات قليلة | REPLACE: عنوان الجلسة 1 | [`slides/week9.html`](slides/week9.html) |
-| الأسبوع 10 | REPLACE: موضوع هذه الوحدة في كلمات قليلة | REPLACE: عنوان الجلسة 1 | [`slides/week10.html`](slides/week10.html) |
-| المناقشة الختامية | REPLACE: عنوان المناقشة الختامية |  | [`slides/capstone.html`](slides/capstone.html) |
+| الأسبوع 1 | المكتب وتفويضه | مكتب يُقاس بالقيمة لا بالتبني | [`slides/week1.html`](slides/week1.html) |
+| الأسبوع 2 | نموذج التشغيل وقراءة التشغيلين | مركزي أم محوري أم موزع | [`slides/week2.html`](slides/week2.html) |
+| الأسبوع 3 | صلاحيات القرار وخارطة الطريق | من يقرر، وبأي ترتيب | [`slides/week3.html`](slides/week3.html) |
+| الأسبوع 4 | البوابات والموازنة | موّل ما يثبت، وأوقف ما لا يثبت | [`slides/week4.html`](slides/week4.html) |
+| الأسبوع 5 | يوم المحاكاة الأول: لجنة المحفظة | لجنة المحفظة | [`slides/week5.html`](slides/week5.html) |
+| الأسبوع 6 | الأدوات المعتمدة وقواعد البيانات | ما يدخل الأداة وما لا يدخلها | [`slides/week6.html`](slides/week6.html) |
+| الأسبوع 7 | صلاحيات الوكلاء وملكية التقييم | صلاحية بقدر الأثر، وتقييم يملكه العمل | [`slides/week7.html`](slides/week7.html) |
+| الأسبوع 8 | وكلاء البرمجة والأدوات التي يبنيها الموظفون والموردون | ما يبنيه الموظفون وما يغيّره الموردون | [`slides/week8.html`](slides/week8.html) |
+| الأسبوع 9 | الإلمام وحماية الخبرة، والإشراف على الحوادث | الناس والحوادث | [`slides/week9.html`](slides/week9.html) |
+| الأسبوع 10 | يوم المحاكاة الثاني: الحادثة والجهة المختصة | حادثة واستفسار من الجهة المختصة | [`slides/week10.html`](slides/week10.html) |
+| المناقشة الختامية | الدفاع عن خطة المكتب أمام اللجنة |  | [`slides/capstone.html`](slides/capstone.html) |
 <!-- /academy:units -->
 
 ## دراسة الحالة
@@ -55,16 +55,16 @@ REPLACE: سطر واحد تحت العنوان: ما يستطيع المشارك
 
 | | الجلسة | المختبر | الملف |
 |---|---|---|---|
-| 1.1 | الأسبوع 1 · الجلسة 1 | REPLACE: ما يبنيه المشاركون في المختبر 1.1 | [`W1_1.html`](labs/W1_1.html) |
-| 2.1 | الأسبوع 2 · الجلسة 1 | REPLACE: ما يبنيه المشاركون في المختبر 2.1 | [`W2_1.html`](labs/W2_1.html) |
-| 3.1 | الأسبوع 3 · الجلسة 1 | REPLACE: ما يبنيه المشاركون في المختبر 3.1 | [`W3_1.html`](labs/W3_1.html) |
-| 4.1 | الأسبوع 4 · الجلسة 1 | REPLACE: ما يبنيه المشاركون في المختبر 4.1 | [`W4_1.html`](labs/W4_1.html) |
-| 5.1 | الأسبوع 5 · الجلسة 1 | REPLACE: ما يبنيه المشاركون في المختبر 5.1 | [`W5_1.html`](labs/W5_1.html) |
-| 6.1 | الأسبوع 6 · الجلسة 1 | REPLACE: ما يبنيه المشاركون في المختبر 6.1 | [`W6_1.html`](labs/W6_1.html) |
-| 7.1 | الأسبوع 7 · الجلسة 1 | REPLACE: ما يبنيه المشاركون في المختبر 7.1 | [`W7_1.html`](labs/W7_1.html) |
-| 8.1 | الأسبوع 8 · الجلسة 1 | REPLACE: ما يبنيه المشاركون في المختبر 8.1 | [`W8_1.html`](labs/W8_1.html) |
-| 9.1 | الأسبوع 9 · الجلسة 1 | REPLACE: ما يبنيه المشاركون في المختبر 9.1 | [`W9_1.html`](labs/W9_1.html) |
-| 10.1 | الأسبوع 10 · الجلسة 1 | REPLACE: ما يبنيه المشاركون في المختبر 10.1 | [`W10_1.html`](labs/W10_1.html) |
+| 1.1 | الأسبوع 1 · الجلسة 1 | ابنِ مسار العمل وسجّل التشغيل الأول | [`W1_1_agent_run1.html`](labs/W1_1_agent_run1.html) |
+| 2.1 | الأسبوع 2 · الجلسة 1 | غيّر شيئًا واحدًا وسجّل التشغيل الثاني | [`W2_1_agent_run2.html`](labs/W2_1_agent_run2.html) |
+| 3.1 | الأسبوع 3 · الجلسة 1 | خارطة الطريق (1): الآفاق والمراحل والتبعيات | [`W3_1_roadmap_horizons.html`](labs/W3_1_roadmap_horizons.html) |
+| 4.1 | الأسبوع 4 · الجلسة 1 | خارطة الطريق (2): بنود الموازنة السنوية | [`W4_1_roadmap_budget.html`](labs/W4_1_roadmap_budget.html) |
+| 5.1 | الأسبوع 5 · الجلسة 1 | محاكاة لجنة المحفظة | [`W5_1_portfolio_committee.html`](labs/W5_1_portfolio_committee.html) |
+| 6.1 | الأسبوع 6 · الجلسة 1 | اختبار السياسة (1): الأدوات وقواعد البيانات | [`W6_1_policy_tools.html`](labs/W6_1_policy_tools.html) |
+| 7.1 | الأسبوع 7 · الجلسة 1 | اختبار السياسة (2): مصفوفة الصلاحيات | [`W7_1_policy_permissions.html`](labs/W7_1_policy_permissions.html) |
+| 8.1 | الأسبوع 8 · الجلسة 1 | اختبار السياسة (3): وكيل البرمجة وإصدار النموذج | [`W8_1_policy_coding_agent.html`](labs/W8_1_policy_coding_agent.html) |
+| 9.1 | الأسبوع 9 · الجلسة 1 | قبل المحاكاة: مراجعة مخاطر أداة بناها موظف | [`W9_1_model_risk_review.html`](labs/W9_1_model_risk_review.html) |
+| 10.1 | الأسبوع 10 · الجلسة 1 | محاكاة الحادثة والجهة المختصة | [`W10_1_incident_simulation.html`](labs/W10_1_incident_simulation.html) |
 <!-- /academy:labs -->
 
 ## المشروع الختامي
@@ -93,7 +93,25 @@ REPLACE: سطر واحد تحت العنوان: ما يستطيع المشارك
 <!-- academy:sources -->
 ## المصادر
 
-- REPLACE: كل مصدر يستشهد به المقرر مع عنوانه، في course.json ضمن "sources"؛ هذه القائمة تُكتب من هناك
+### المرجعيات الوطنية
+
+- [سدايا: إطار تبني الذكاء الاصطناعي](https://sdaia.gov.sa/ar/SDAIA/about/Files/AIAdoptionFramework.pdf)
+- [سدايا: مبادئ أخلاقيات الذكاء الاصطناعي](https://sdaia.gov.sa/ar/SDAIA/about/Documents/ai-principles.pdf)
+- [سدايا: مبادئ الذكاء الاصطناعي التوليدي للجهات الحكومية](https://sdaia.gov.sa/ar/SDAIA/about/Files/GenAIGuidelinesForGovernmentARCompressed.pdf)
+- [سدايا: الإطار الوطني لإدارة مخاطر الذكاء الاصطناعي (أبريل 2026)](https://sdaia.gov.sa/ar/MediaCenter/KnowledgeCenter/ResearchLibrary/ExecutiveSummaryAr.pdf)
+- [نظام حماية البيانات الشخصية](https://sdaia.gov.sa/ar/SDAIA/about/Documents/PersonalDataProtectionLawAr.pdf)
+- [اللائحة التنفيذية لنظام حماية البيانات الشخصية](https://sdaia.gov.sa/ar/SDAIA/about/Documents/ImplementingRegulationPersonalDataProtectionLawAr.pdf)
+- [مكتب إدارة البيانات الوطنية: سياسة تصنيف البيانات](https://sdaia.gov.sa/ar/SDAIA/about/Documents/DataClassificationPolicyAr.pdf)
+
+### صلاحيات القرار والوكلاء
+
+- [MIT Sloan: A framework for determining when AI can make decisions (MIT CISR, 2026)](https://mitsloan.mit.edu/ideas-made-to-matter/a-framework-determining-when-ai-can-make-decisions)
+- [Anthropic: Building effective agents](https://www.anthropic.com/engineering/building-effective-agents)
+
+### عارضات آثار التنفيذ (أمثلة)
+
+- [Langfuse: documentation](https://langfuse.com/docs)
+- [Arize Phoenix: documentation](https://arize.com/docs/phoenix)
 <!-- /academy:sources -->
 
 ### المرجعيات الوطنية
