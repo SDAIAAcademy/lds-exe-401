@@ -128,8 +128,8 @@ def check_portfolio():
 
 
 def check_policy():
-    key = json.loads((SOL / 'policy_key.json').read_text(encoding='utf-8'))
-    matrix = {(r['agent'], r['action']): r for r in read_csv(SOL / 'permission_matrix_reference.csv')}
+    key = json.loads((SOL / 'policy' / 'policy_key.json').read_text(encoding='utf-8'))
+    matrix = {(r['agent'], r['action']): r for r in read_csv(SOL / 'policy' / 'permission_matrix_reference.csv')}
     for s in key['scenarios']:
         if 'matrix' in s:
             agent, action, level = s['matrix']
@@ -142,7 +142,14 @@ def check_policy():
         if r['approver_role'] and r['approver_role'] == key['owners'].get(agent):
             print(f'FAIL {agent} {action}: the owner approves its own agent')
             sys.exit(1)
-    print(f"policy: {len(key['scenarios'])} scenarios consistent with {len(matrix)} matrix rows")
+    r = subprocess.run([sys.executable, str(LABS / 'policy' / 'matrix_check.py'), str(SOL / 'policy' / 'permission_matrix_reference.csv')],
+                       capture_output=True, text=True, encoding='utf-8')
+    expect('matrix_check on the reference', (r.returncode, 'no fixed rule broken' in r.stdout), (0, True))
+    for fb, ref in (('policy_after_lab_6_1.md', 'policy_after_lab_6_1.md'), ('policy_after_lab_7_1.md', 'policy_after_lab_7_1.md'),
+                    ('permission_matrix_after_lab_7_1.csv', 'permission_matrix_reference.csv')):
+        expect(f'fallback {fb} matches the reference', (FILES / 'policy' / 'fallback' / fb).read_bytes(), (SOL / 'policy' / ref).read_bytes())
+    expect('tool requests resolved', sorted(key['tool_requests']), [f'TR{i:02d}' for i in range(1, 11)])
+    print(f"policy: {len(key['scenarios'])} scenarios consistent with {len(matrix)} matrix rows; fallbacks match")
     print('PASS policy')
 
 
