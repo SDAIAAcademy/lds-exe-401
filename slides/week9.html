@@ -1,56 +1,202 @@
 <section class="slide title" id="title" data-auto="title">
-  <aside class="notes">REPLACE: الترحيب، والتعريف بنفسك، وسؤال للقاعة يضبط الإيقاع، وإيقاع اليوم</aside>
+  <aside class="notes"><p>اجمع القسم 8. اليوم الناس أولًا (الإلمام وحماية الخبرة)، ثم الحوادث (مراجعة مخاطر النموذج وأدوار فريق القيادة)، تمهيدًا ليوم المحاكاة الثاني في الأسبوع القادم. وزّع الأدوار في المختبر.</p></aside>
 </section>
 
-<section class="slide" id="agenda" data-auto="agenda"></section>
+<section class="slide" id="agenda" data-auto="agenda">
+  <aside class="notes"><p>مراجعة ومراجعة المختبر 8.1 (15)، والإلمام بحسب الدور وحماية الخبرة (35)، والإشراف على الحوادث ومراجعة المخاطر (40)، ثم المختبر 9.1 (60).</p></aside>
+</section>
+
+<section class="slide" id="review-week8" data-lo="LO4">
+  <div class="kicker">مراجعة الأسبوع 8</div>
+  <h2>أي قاعدة تمنع هذا؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO4">
+    <p class="lead">في شركة اتصالات افتراضية، وكيل برمجة معتمد على مستودع تجريبي. مطور يطلب أن يعمل على مستودع نظام الفوترة الحقيقي، وأن ينشر التعديل في الإنتاج «إذا نجحت الاختبارات». ما القاعدة الأقرب إلى حسم الطلب؟</p>
+    <div class="opts">
+      <div class="opt" data-why="القاعدة تمنع النشر الذاتي، لكنها لا تقول شيئًا عن المستودع">نجاح الاختبارات يكفي للنشر إذا راجع المطور الشيفرة بنفسه</div>
+      <div class="opt" data-ok>الوكيل معتمد على مستودع بعينه، والنشر في الإنتاج بموافقة لا بنتيجة اختبار</div>
+      <div class="opt" data-why="لا يتعلق بإصدار النموذج، فلم يتغير شيء من المورد">الإصدار الجديد يُشغَّل على حزمة التقييم قبل التبديل</div>
+      <div class="opt" data-why="لا يتعلق بأداة بناها موظف على جهازه">كل أداة يبنيها موظف تُسجَّل قبل أن تمس البيانات</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> الطلب يغيّر المستودع ويجعل الاختبار موافقة: قاعدتا وكيل البرمجة تحسمانه.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: ب. ثلاث دقائق. هذا S7 بأرقام وأسماء أخرى.</p></aside>
+</section>
+
+<section class="slide" id="debrief-8-1" data-lo="LO4">
+  <div class="kicker">ما أظهره المختبر 8.1</div>
+  <h2>السياسة النهائية لا تمنع ما يبنيه الموظفون؛ تجعله مرئيًا ومراجعًا</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>S7 غير مسموح: مستودع الرواتب سري، والنشر بموافقة مدير الإصدارات</li>
+      <li>S8 مسموح بشرط: تثبيت الإصدار، والحزمة قبل التبديل، وإلا ص1</li>
+    </ul>
+    <ul class="bullets">
+      <li>TR10 أداة بناها مشرف على جهازه: تُسجَّل وتُراجع وتُنقل</li>
+      <li>هذه الأداة نفسها موضوع اليوم</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>عشر دقائق. اسأل: أي سيناريو تغيّر حسمه بين الأسبوع 6 والأسبوع 8؟ ثم انتقل: لو طُبق القسم 6 على TR10، أي قاعدة كانت ستكشف ما سترونه في المختبر اليوم؟ لا تجب الآن.</p></aside>
+</section>
 
 <!-- الجلسة 1 -->
 
-<section class="slide section" id="s1" data-auto="section" data-session="1"></section>
-
-<section class="slide" id="s1-idea">
-  <div class="kicker">REPLACE: السؤال الذي تجيب عنه الشريحة</div>
-  <h2>REPLACE: فكرة واحدة في جملة</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: ست نقاط على الأكثر، كل منها فكرة تامة</li>
-      <li>REPLACE: أبرز العبارة الأساسية، والأرقام من تشغيل المختبر لا من الذاكرة</li>
-    </ul>
-    <div class="card c-teal"><h4>في دراسة الحالة</h4><p class="small mb0">REPLACE: اربط الفكرة بدراسة الحالة وبياناتها</p></div>
-  </div>
-  <div class="callout warn mt"><b>أين يقع الخطأ.</b> REPLACE: الخطأ الذي سيقع فيه المشاركون، وكيف يتعرفون عليه</div>
-  <aside class="notes">REPLACE: ما تقوله، والعرض الحي، والسؤال للقاعة، والخطأ الشائع وحلّه</aside>
+<section class="slide section" id="s1" data-auto="section" data-session="1">
+  <aside class="notes"><p>الكتلة الأولى نحو 35 دقيقة على الإلمام بحسب الدور وحماية الخبرة؛ الثانية نحو 40 دقيقة على الإشراف على الحوادث ومراجعة المخاطر والأدوار؛ ثم المختبر.</p></aside>
 </section>
 
-<section class="slide" id="s1-steps">
-  <div class="kicker">خطوة بخطوة</div>
-  <h2>REPLACE: عملية تظهر خطوة مع كل ضغطة</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: الاسم</b>REPLACE: ما يحدث أولًا</div>
-    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: الاسم</b>REPLACE: الجزء التالي</div>
-    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: الاسم</b>REPLACE: النتيجة</div>
+<section class="slide" id="role-literacy" data-lo="LO6">
+  <div class="kicker">الإلمام القائم على الأدوار</div>
+  <h2>دورة واحدة للجميع تقيس الحضور؛ الإلمام بحسب الدور يقيس ما تغيّر في العمل</h2>
+  <table class="t small">
+    <tr><th>الدور</th><th>ما يحتاج إليه</th><th>كيف يُقاس</th></tr>
+    <tr><td>المجلس والتنفيذيون</td><td>قراءة القيمة والمخاطر</td><td>أسئلتهم في اللجان</td></tr>
+    <tr><td>من يوافق</td><td>متى يرفض فعل الوكيل</td><td>عينة من موافقاته</td></tr>
+    <tr><td>المستخدمون</td><td>قاعدة البيانات والتحقق</td><td>طلبات مرفوضة وأخطاء مكتشفة</td></tr>
+    <tr><td>من يبني</td><td>السجل والاختبار والمراجعة</td><td>أدوات مسجلة ومختبرة</td></tr>
+  </table>
+  <aside class="notes"><p>في الحالة: دورة عامة واحدة حضرها 9% دون قياس للتطبيق (الدليل E10). القسم 9 من الخطة يبدأ من هذا الجدول.</p></aside>
+</section>
+
+<section class="slide" id="protect-expertise" data-lo="LO6">
+  <div class="kicker">حماية الخبرة</div>
+  <h2>من يتحقق من مخرجات النموذج يحتاج إلى أن يبقى قادرًا على العمل بدونه</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>ما يتآكل</h4><p class="small mb0">المراجع الذي لم يحسب منذ سنة يوافق على حساب خاطئ لأنه «يبدو معقولًا».</p></div>
+    <div class="card c-teal"><h4>ما يحميها</h4><p class="small mb0">عمل دوري دون النموذج، وحالات صعبة تُحل يدويًا، ومراجعات يقودها الخبير لا النموذج.</p></div>
   </div>
-  <div class="callout tip mt frag"><b>الخلاصة.</b> REPLACE: الجملة التي تبقى في الذاكرة</div>
-  <aside class="notes">اضغط مرة لكل خطوة، وقل ما تضيفه كل خطوة قبل ظهور التالية. REPLACE: المثال الذي تشرحه</aside>
+  <aside class="notes"><p>اختبار الدخول في الأسبوع الأول كان بلا ذكاء اصطناعي لهذا السبب: ليعرف كل مشارك ما يستطيعه وحده. مثال موازٍ: محاسب يراجع مطابقات آلية، ويطابق يدويًا عينة صغيرة كل شهر ليبقى يعرف شكل الخطأ.</p></aside>
+</section>
+
+<section class="slide" id="check-literacy" data-lo="LO6">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>أي خطة إلمام تحمي التحقق؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO6">
+    <p class="lead">في مستشفى افتراضي، الصيادلة يراجعون جرعات يقترحها نموذج. نسبة رفضهم للاقتراحات نزلت من 6% إلى 0.5% في سنة، ولم تتغير جودة النموذج. أي خطة تعالج ما تقوله هذه النسبة؟</p>
+    <div class="opts">
+      <div class="opt" data-why="الحضور لا يعالج تآكل المهارة في العمل نفسه">دورة سنوية لكل العاملين عن الذكاء الاصطناعي</div>
+      <div class="opt" data-why="يزيد الاعتماد على النموذج، والمشكلة أن أحدًا لم يعد يتحقق">رفع صلاحية النموذج لأن الصيادلة يوافقون عليه</div>
+      <div class="opt" data-ok>حالات بأخطاء مزروعة في المراجعة، وحساب يدوي دوري لعينة من الجرعات</div>
+      <div class="opt" data-why="يحاسب على عرض لا على سبب، ولا يعيد المهارة">إنذار الصيادلة الذين تقل نسبة رفضهم عن 2%</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> نزول الرفض والنموذج ثابت يعني تراجع التحقق؛ يُستعاد بالممارسة وبأخطاء معروفة تُكتشف.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: ج. أربع دقائق. اسأل: كيف تعرف في جهتك أن من يوافق ما زال يتحقق؟</p></aside>
+</section>
+
+<section class="slide" id="incident-cycle" data-lo="LO6">
+  <div class="kicker">الإشراف على الحوادث</div>
+  <h2>الحادثة تُدار قبل وقوعها: من يرصد، ومن يقرر، وإلى من يُصعَّد</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>الرصد</b>من يرى الخطأ أولًا: شكوى، أو مراقبة، أو مراجعة</div>
+    <div class="arrow">←</div>
+    <div class="step c-cyan"><b>التصنيف</b>درجة الخطورة، ومن يُبلَّغ</div>
+    <div class="arrow">←</div>
+    <div class="step c-purple"><b>الاحتواء</b>إيقاف، وتعليق، وحصر</div>
+    <div class="arrow">←</div>
+    <div class="step c-amber"><b>التعلم</b>ما يتغير في السياسة والخطة</div>
+  </div>
+  <aside class="notes"><p>الإطار الوطني لإدارة مخاطر الذكاء الاصطناعي يتناول رصد الحوادث وإدارة الاستجابة ضمن مراحل إدارة المخاطر؛ الخطوات الأربع هنا تبسيط المقرر. المصدر في قائمة المراجع.</p></aside>
+</section>
+
+<section class="slide" id="risk-matrix" data-lo="LO6 LO3">
+  <div class="kicker">مراجعة مخاطر النموذج</div>
+  <h2>مستوى الخطر = الاحتمالية × الأثر، على أربع درجات لكل منهما</h2>
+  <div class="cols cols-2">
+    <table class="t small">
+      <tr><th>الدرجة</th><th>الاحتمالية</th><th>الأثر</th></tr>
+      <tr><td>1</td><td>نادر</td><td>منخفض</td></tr>
+      <tr><td>2</td><td>غير مرجح</td><td>متوسط</td></tr>
+      <tr><td>3</td><td>مرجح</td><td>مرتفع</td></tr>
+      <tr><td>4</td><td>شبه مؤكد</td><td>كارثي</td></tr>
+    </table>
+    <ul class="bullets">
+      <li>منخفض: 1 إلى 2</li>
+      <li>متوسط: 3 إلى 6</li>
+      <li>مرتفع: 8 إلى 12</li>
+      <li>كارثي: 16</li>
+    </ul>
+  </div>
+  <div class="caption">الإطار الوطني لإدارة مخاطر الذكاء الاصطناعي (سدايا، أبريل 2026).</div>
+  <aside class="notes"><p>كل درجة تحتاج إلى دليل: الاحتمالية من بيانات (كم مرة يقع الخطأ)، والأثر مما يحدث للأشخاص. «مرتفع» في المحفظة كان يعني مراجعة مخاطر قبل البوابة التالية؛ اليوم تجريها.</p></aside>
+</section>
+
+<section class="slide" id="severity-roles" data-lo="LO6">
+  <div class="kicker">خطورة الحادثة والأدوار</div>
+  <h2>سلم خطورة يقول من يُبلَّغ، وبطاقات أدوار تقول من يملك ماذا</h2>
+  <div class="cols cols-2">
+    <table class="t small">
+      <tr><th>الدرجة</th><th>متى</th></tr>
+      <tr><td>ح1</td><td>خطأ بلا أثر على أشخاص</td></tr>
+      <tr><td>ح2</td><td>أثر على أشخاص يمكن تصحيحه</td></tr>
+      <tr><td>ح3</td><td>أثر على أشخاص أو بيانات شخصية خرجت عن المصرح لهم</td></tr>
+    </table>
+    <ul class="bullets">
+      <li>قائد الحادثة يقرر ويملك سجل القرارات</li>
+      <li>مالك العمل يتواصل مع المتأثرين</li>
+      <li>مسؤول حماية البيانات يقيّم التسرب والإشعار</li>
+      <li>لا أحد يقرر خارج بطاقته</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>سلم ح1 إلى ح3 أداة المقرر وقاعدة الحالة، لا معيار وطني. الدرجة قد ترتفع في أثناء الحادثة حين تظهر معلومة جديدة: اكتب في السجل متى ارتفعت ولماذا.</p></aside>
+</section>
+
+<section class="slide" id="breach-notice" data-lo="LO6">
+  <div class="kicker">حين تخرج بيانات شخصية</div>
+  <h2>اللائحة التنفيذية لنظام حماية البيانات الشخصية: إشعار خلال 72 ساعة من العلم</h2>
+  <ul class="bullets">
+    <li>المادة الرابعة والعشرون: تُشعر جهة التحكم الجهة المختصة خلال 72 ساعة من علمها بالتسرب، إذا كان من شأنه الإضرار بالبيانات أو بأصحابها</li>
+    <li>الإشعار يصف الحادثة ووقتها، وفئات أصحاب البيانات وأعدادهم، والمخاطر والإجراءات، وهل أُشعر أصحاب البيانات، وجهة التواصل</li>
+    <li>ما لم يتوفر يُقدَّم لاحقًا مع مبررات التأخير؛ ويُشعر أصحاب البيانات دون تأخير غير مبرر وبلغة واضحة</li>
+  </ul>
+  <aside class="notes"><p>هذا ملخص للمادة لا نصها؛ اقرأ النص في اللائحة من قائمة المراجع قبل المحاكاة. المهلة تبدأ من العلم، لا من نهاية التحقيق. في المحاكاة: سجّل وقت العلم في السجل.</p></aside>
+</section>
+
+<section class="slide" id="check-incident" data-lo="LO6">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>ما أول قرار؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO6">
+    <p class="lead">في شركة توصيل افتراضية، أداة لتقييم المندوبين بناها موظف أعطت عشرين مندوبًا تقييمًا «ضعيفًا» بسبب خطأ في احتساب أيام العطل، وخُصمت حوافزهم. لم يخرج أي بيان خارج الشركة. ما أول قرار يناسب السلم؟</p>
+    <div class="opts">
+      <div class="opt" data-ok>ح2: إيقاف الأداة، وتعليق الخصم، وإبلاغ مالك العمل ورئيس المكتب</div>
+      <div class="opt" data-why="الأثر على أشخاص، فليست ح1">ح1: إبلاغ صاحب الأداة ليصلح الخطأ في التحديث القادم</div>
+      <div class="opt" data-why="لم تخرج بيانات، فلا تسرب يوجب إشعار الجهة المختصة">ح3: إشعار الجهة المختصة خلال 72 ساعة</div>
+      <div class="opt" data-why="يؤخر الاحتواء والحوافز مخصومة الآن">انتظار نهاية الشهر لمعرفة عدد المتأثرين كله</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> أثر على أشخاص يمكن تصحيحه، ولا بيانات خرجت: ح2، والاحتواء قبل التحقيق.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: أ. أربع دقائق. اسأل: ما الذي يجعلها ح3؟ (لو أُرسلت التقييمات إلى خارج المصرح لهم).</p></aside>
 </section>
 
 <section class="slide lab" id="lab-9-1" data-auto="lab" data-lab="9.1">
-  <aside class="notes">REPLACE: ما تراقبه أثناء عمل المشاركين، والمشكلات المعتادة، والبديل لمن لم يُنهِ مختبرًا سابقًا</aside>
+  <aside class="notes"><p>60 دقيقة، والذكاء الاصطناعي مرشد. وزّع الأدوار في الخطوة 5 بحيث يكون لكل لجنة قائد حادثة ومسؤول حماية بيانات ومراقب. لا تكشف شيئًا عن مدخلات الأسبوع القادم. من لم يُكمل المراجعة يبدأ المحاكاة من <code>labs/files/incident/fallback/risk_review_after_lab_9_1.md</code>.</p></aside>
+</section>
+
+<section class="slide" id="section-9-brief" data-lo="LO6">
+  <div class="kicker">القسم 9 من الخطة: دراسة ذاتية، 60 دقيقة</div>
+  <h2>صفحة ونصف: الأفراد، الإلمام بحسب الدور وحماية الخبرة</h2>
+  <ul class="bullets">
+    <li>جدول الإلمام: الأدوار، وما يحتاج إليه كل دور، وكيف يُقاس</li>
+    <li>الخبرة التي يعتمد عليها التحقق في المجموعة، وكيف تُحمى</li>
+    <li>الأبطال في الفرق، وموازنة الإلمام من خارطة الطريق</li>
+    <li>ما الذي تغيّره مراجعة اليوم في خطة الإلمام</li>
+  </ul>
+  <aside class="notes"><p>الذكاء الاصطناعي كامل في الصياغة، بنسخة غير سرية.</p></aside>
 </section>
 
 <section class="slide" id="wrap-up">
   <div class="kicker">خلاصة الأسبوع 9</div>
   <h2>ثلاثة أمور تبقى معك</h2>
   <div class="cols cols-3">
-    <div class="card c-teal"><h4>تذكّر</h4><p class="small mb0">REPLACE: فكرة يحتفظ بها المشاركون</p></div>
-    <div class="card c-coral"><h4>تذكّر</h4><p class="small mb0">REPLACE: فكرة يحتفظ بها المشاركون</p></div>
-    <div class="card c-purple"><h4>تذكّر</h4><p class="small mb0">REPLACE: فكرة يحتفظ بها المشاركون</p></div>
+    <div class="card c-teal"><h4>الإلمام بالدور</h4><p class="small mb0">ويُقاس بما تغيّر في العمل.</p></div>
+    <div class="card c-coral"><h4>الخبرة تُحمى</h4><p class="small mb0">من يتحقق يبقى قادرًا بدون النموذج.</p></div>
+    <div class="card c-purple"><h4>الأدوار قبل الحادثة</h4><p class="small mb0">والمهلة تبدأ من العلم.</p></div>
   </div>
+  <aside class="notes"><p>جملة من كل مشارك: من في جهتك يعرف أنه قائد الحادثة إن وقعت غدًا؟</p></aside>
 </section>
 
 <section class="slide dark" id="next" data-label="التالي">
   <div class="kicker">التالي</div>
-  <h2>الأسبوع 10: REPLACE: موضوع هذه الوحدة في كلمات قليلة</h2>
-  <p class="lead">REPLACE: ما يجهزه المشاركون قبل ذلك، والمختبرات غير المكتملة يمكن إكمالها في المنزل</p>
-  <aside class="notes">REPLACE: الحسابات أو التثبيتات أو القراءة التي يحتاجها المشاركون قبل الوحدة التالية</aside>
+  <h2>الأسبوع 10: يوم المحاكاة الثاني، الحادثة والجهة المختصة</h2>
+  <p class="lead">سلّم القسم 9. احتفظ بمراجعتك وأسئلتك الثلاثة، واقرأ قالب سجل القرارات وقالب الرد على الجهة المختصة.</p>
+  <aside class="notes"><p>الملفات: <code>labs/files/incident/decision_log_template.csv</code> و<code>regulator_reply_template.md</code>. بعد المحاكاة كتلة تقييم لسجل القرارات والرد، ثم انطلاق المشروع الختامي.</p></aside>
 </section>

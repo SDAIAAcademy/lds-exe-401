@@ -173,6 +173,13 @@ def check_incident():
     i = REF['incident']
     expect('true flag days', sum(len(v) for v in true.values()), i['true_flag_days'])
     expect('false flag drivers', sorted(d for d in tool if d not in true), i['false_flag_drivers'])
+    tool = LABS / 'incident' / 'recount.py'
+    for args, want in (([], f"split at midnight: {i['true_flag_days']} flag-days for {i['true_flagged_drivers']} drivers"),
+                       (['--as-tool'], 'this count reproduces the tool list exactly.')):
+        r = subprocess.run([sys.executable, str(tool), *args], capture_output=True, text=True, encoding='utf-8')
+        expect(f'recount {args}', (r.returncode, want in r.stdout), (0, True))
+    expect('fallback risk review matches the reference', (FILES / 'incident' / 'fallback' / 'risk_review_after_lab_9_1.md').read_bytes(),
+           (SOL / 'incident' / 'risk_review_after_lab_9_1.md').read_bytes())
     print(f"incident: {i['tool_flag_days']} flag-days from the tool, {i['true_flag_days']} real; {len(i['false_flag_drivers'])} drivers flagged only by the bug; wrong warnings {i['wrong_warnings']}")
     print('PASS incident')
 
