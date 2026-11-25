@@ -41,7 +41,7 @@ def expect(name, got, want):
 
 def check_agent():
     expected = {'run1': (11, 48, 5071.45, {'policy_not_applied': 3, 'wrong_amount': 3, 'steps_exhausted': 2, 'followed_customer_instruction': 1}),
-                'run2': (14, 66, 581.45, {'wrong_amount': 3, 'steps_exhausted': 2, 'followed_customer_instruction': 1})}
+                'run2': (17, 60, 329.0, {'steps_exhausted': 2, 'followed_customer_instruction': 1})}
     for label, (succ, calls, over, fails) in expected.items():
         tag = f'ref-{label}'
         subprocess.run([sys.executable, str(LABS / 'agent' / 'run_agent.py'), str(SOL / 'agent' / f'workflow_{label}.json'),

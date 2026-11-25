@@ -5,13 +5,13 @@
   "steps": [
     "read_question",
     "find_product",
-    "read_policy",
     "decide",
     "reply"
   ],
   "tools": [
     "find_product",
-    "read_policy"
+    "read_policy",
+    "calc_refund"
   ],
   "approval": {
     "over_amount_sar": 2000,
