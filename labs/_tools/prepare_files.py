@@ -298,10 +298,54 @@ def roadmap_files():
 - روبوت المحادثة القديم في المتاجر يكلّف {LEGACY_CHATBOT_LICENCE} ألفًا في السنة رخصةً، ويبقى يعمل حتى يُوقف (المبادرة I08)، ويُحسب من السقف.
 - لا ينقل فائض سنة إلى سنة أخرى.
 """)
-    wcsv(FILES / 'roadmap' / 'roadmap_template.csv', ['id', 'horizon_1_2_3', 'start_month', 'milestone', 'depends_on', 'reason'],
+    wcsv(FILES / 'roadmap' / 'roadmap_template.csv', ROADMAP_HEADER,
          [[i[0], '', '', '', i[5], ''] for i in INITIATIVES])
-    wcsv(FILES / 'roadmap' / 'budget_template.csv', ['id', 'line', 'y1_k', 'y2_k', 'y3_k'],
-         [[i[0], t, '', '', ''] for i in INITIATIVES for t in ('build', 'run', 'retire')] + [['LEGACY', 'run', '', '', '']])
+    wcsv(FILES / 'roadmap' / 'budget_template.csv', ['id', 'build_y1_k', 'build_y2_k', 'build_y3_k', 'note'],
+         [[i[0], '', '', '', ''] for i in INITIATIVES])
+
+
+ROADMAP_HEADER = ['id', 'horizon_1_2_3', 'go_live_month', 'milestone', 'depends_on', 'reason']
+# The reference roadmap after lab 3.1: horizons from the evidence, go-live months from initiatives.csv.
+ROADMAP_REF = {
+    'I01': (1, 3, 'المكتب بفريقه وخط رفعه إلى الرئيس التنفيذي', 'كل ما بعده يحتاج إلى مالك'),
+    'I02': (1, 12, 'المجموعات الست لها مالكون وتصنيف وفهرس', 'البيانات 1 بالدليل لا 3: قيد على كل حالة تعتمد عليها'),
+    'I03': (1, 6, 'السياسة والسجل منشوران', 'الحوكمة 1: لا سياسة مكتوبة اليوم'),
+    'I04': (1, 6, 'بيئة معزولة وأول حزمة تقييم', 'لا تجربة نماذج دون بيئة معزولة'),
+    'I05': (1, 4, 'أول دفعة من الإلمام بحسب الدور', 'القدرات البشرية 1: الإلمام يسبق التوسيع لا يتبعه'),
+    'I06': (1, 9, 'ستة أدوار معيّنة', 'لا مهندس تعلم آلة اليوم'),
+    'I07': (1, 9, 'الوكيل في كل المتاجر بحزمة تقييم يملكها العمل', 'حالة على بيانات «عام»، وبعد السياسة والبيئة المعزولة'),
+    'I08': (2, 15, 'روبوت المحادثة القديم موقوف', 'يتبع توسيع الوكيل؛ كل شهر تشغيل متوازٍ له تكلفة'),
+    'I09': (2, 20, 'أول تنبؤ في المتاجر', 'يحتاج إلى منصة البيانات وفريق التعلم الآلي: لا يسبقهما'),
+    'I10': (2, 18, 'مطابقة الفواتير في المالية', 'يحتاج إلى منصة البيانات'),
+    'I11': (1, 10, 'الفحص البصري على خطي التغليف', 'بيانات صور في المصنع لا تنتظر المنصة'),
+    'I12': (2, 22, 'تخطيط المسارات', 'يحتاج إلى منصة البيانات'),
+    'I13': (1, 6, 'قياس أول حالة ممولة في الحسابات', 'الأثر 0: لا قيمة مقيسة اليوم'),
+    'I14': (3, 30, 'تحسين التكييف في المجمعات', 'يحتاج إلى المنصة، والقيمة تنتظر صيفًا كاملًا'),
+}
+# The reference resolution of lab 4.1 (one of several valid ones): year 1 was 428 over its cap.
+BUDGET_REF_CHANGES = {
+    'go_live': {'I06': 12, 'I11': 12},           # hire in stages; second packaging line after the first is measured
+    'build': {'I05': (240, 360, 200)},           # literacy: 60 moved from year 1 to year 2
+}
+
+
+def roadmap_solutions():
+    sol = SOL / 'roadmap'
+    wcsv(sol / 'maturity_reference.csv', ['component', 'pillar', 'self_score_0_4', 'evidence_ids', 'evidence_score_0_4'],
+         [[c, p, s, e, ev] for c, p, s, ev, e in COMPONENTS])
+    rows = []
+    for i in INITIATIVES:
+        h, m, ms, why = ROADMAP_REF[i[0]]
+        rows.append([i[0], h, m, ms, i[5], why])
+    wcsv(sol / 'roadmap_after_lab_3_1.csv', ROADMAP_HEADER, rows)
+    wcsv(FILES / 'roadmap' / 'fallback' / 'roadmap_after_lab_3_1.csv', ROADMAP_HEADER, rows)
+    rows4 = [[r[0], r[1], BUDGET_REF_CHANGES['go_live'].get(r[0], r[2]), r[3], r[4], r[5]] for r in rows]
+    wcsv(sol / 'roadmap_after_lab_4_1.csv', ROADMAP_HEADER, rows4)
+    brows = []
+    for i in INITIATIVES:
+        b = BUDGET_REF_CHANGES['build'].get(i[0])
+        brows.append([i[0], *(b if b else ('', '', '')), 'نُقل 60 من السنة 1 إلى السنة 2' if b else ''])
+    wcsv(sol / 'budget_after_lab_4_1.csv', ['id', 'build_y1_k', 'build_y2_k', 'build_y3_k', 'note'], brows)
 
 
 def roadmap_reference():
@@ -642,6 +686,7 @@ def main():
     case_pack()
     agent_files()
     roadmap_files()
+    roadmap_solutions()
     portfolio_files()
     policy_files()
     rows, tool, true = incident_files(rng)

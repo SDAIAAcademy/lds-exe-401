@@ -73,6 +73,17 @@ def check_roadmap():
     expect('totals', totals, r['totals'])
     profile = read_csv(FILES / 'roadmap' / 'maturity_profile.csv')
     expect('components', len(profile), 7)
+    ref_profile = read_csv(SOL / 'roadmap' / 'maturity_reference.csv')
+    expect('evidence scores', [int(p['evidence_score_0_4']) for p in ref_profile], [2, 1, 1, 2, 1, 2, 0])
+    tool = LABS / 'roadmap' / 'roadmap_check.py'
+    for road, budget, want_code, want_total in (('roadmap_after_lab_3_1.csv', None, 1, '6,628    7,720    5,255'),
+                                                ('roadmap_after_lab_4_1.csv', 'budget_after_lab_4_1.csv', 0, '6,200    7,780    5,255')):
+        cmd = [sys.executable, str(tool), str(SOL / 'roadmap' / road)] + (['--budget', str(SOL / 'roadmap' / budget)] if budget else ['--budget', str(FILES / 'roadmap' / 'budget_template.csv')])
+        p = subprocess.run(cmd, capture_output=True, text=True, encoding='utf-8')
+        expect(f'{road} exit code', p.returncode, want_code)
+        expect(f'{road} totals', want_total in p.stdout, True)
+        expect(f'{road} dependencies', 'dependencies respected' in p.stdout, True)
+    print('roadmap: lab 3.1 reference respects dependencies and is 428 over in year 1; lab 4.1 reference fits the caps')
     print(f'roadmap: totals {totals} against caps {r["caps"]}; year 1 over by {r["over_cap"][0]}; run share in year 3 {r["run_share_y3"]}')
     print('PASS roadmap')
 

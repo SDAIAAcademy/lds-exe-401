@@ -1,56 +1,209 @@
 <section class="slide title" id="title" data-auto="title">
-  <aside class="notes">REPLACE: الترحيب، والتعريف بنفسك، وسؤال للقاعة يضبط الإيقاع، وإيقاع اليوم</aside>
+  <aside class="notes"><p>اجمع القسم 2 (مخطط نموذج التشغيل) ومذكرات التقييم إن لم تُجمع. اليوم سؤالان: من يقرر ماذا، وبأي ترتيب تُبنى القدرات. المختبر بلا برمجة: جدول بيانات وبرنامج فحص.</p></aside>
 </section>
 
-<section class="slide" id="agenda" data-auto="agenda"></section>
+<section class="slide" id="agenda" data-auto="agenda">
+  <aside class="notes"><p>مراجعة ومراجعة المختبر 2.1 (15)، وصلاحيات القرار (35)، وخارطة الطريق من ملف النضج (35)، ثم المختبر 3.1 (60).</p></aside>
+</section>
+
+<section class="slide" id="review-week2" data-lo="LO5">
+  <div class="kicker">مراجعة الأسبوع 2</div>
+  <h2>ماذا تقول مذكرة التقييم هنا؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO5">
+    <p class="lead">وكيل لحجز مواعيد الصيانة في شركة مرافق افتراضية: التشغيل الأول نجح في 14 من 25 مهمة، والثاني بعد إضافة ضابط واحد نجح في 21 من المهام نفسها وبالميزانية نفسها. لم يُشغَّل الوكيل بعد إلا على هذه المهام الخمس والعشرين. ما أدق جملة للمذكرة؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يعمم من خمس وعشرين مهمة على كل الطلبات دون تشغيل عليها">الوكيل جاهز للتشغيل الفعلي بنسبة نجاح 84%</div>
+      <div class="opt" data-why="التغيير الوحيد بين التشغيلين هو الضابط، فالسبب معروف">لا يمكن معرفة سبب التحسن بين التشغيلين</div>
+      <div class="opt" data-why="يرفض النتيجة كلها، والمقارنة على المهام نفسها صحيحة">النتيجة لا تُعتمد لأن المهام قليلة</div>
+      <div class="opt" data-ok>الضابط رفع النجاح من 14 إلى 21 على هذه المهام، والتعميم يحتاج إلى مهام من الواقع</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> المذكرة تقول ما قاسته وتسمي حدوده: تغيير واحد، ومهام ثابتة، ولا تعميم قبل مهام أكثر.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: د. ثلاث دقائق. اسأل من كتب في مذكرته ما لم يُختبر.</p></aside>
+</section>
+
+<section class="slide" id="debrief-2-1" data-lo="LO5">
+  <div class="kicker">ما أظهره المختبر 2.1</div>
+  <h2>أداة يملكها البرنامج أصلحت أكثر من تعليمات تطلب قراءة السياسة</h2>
+  <table class="t small">
+    <tr><th>تغيير واحد على التعريف المرجعي</th><th class="num">النجاح من 20</th><th class="num">المدفوع زيادةً (ريال)</th></tr>
+    <tr><td>لا تغيير (التشغيل الأول، 48 استدعاءً)</td><td class="num">11</td><td class="num">5,071.45</td></tr>
+    <tr><td>أداة حساب المبلغ <code>calc_refund</code> (60)</td><td class="num">17</td><td class="num">329</td></tr>
+    <tr><td>خطوة قراءة السياسة <code>read_policy</code> (66)</td><td class="num">14</td><td class="num">581.45</td></tr>
+    <tr><td>ضابط السؤال عند الغموض (40)</td><td class="num">13</td><td class="num">5,071.45</td></tr>
+    <tr><td>حذف نقطة الموافقة (48)</td><td class="num">8</td><td class="num">5,071.45</td></tr>
+  </table>
+  <div class="caption">بين القوسين عدد الاستدعاءات من 80. من البديل المكتوب بسيناريو، لا من نموذج. حذف الموافقة لم يغيّر المدفوع زيادةً هنا، لكنه نفّذ ثلاثة ردود فوق 2,000 ريال دون مشرف.</div>
+  <aside class="notes"><p>عشر دقائق. اطلب من طاولتين عرض تغييرهما وتوقعهما. من شغّل بنموذج حقيقي يقرأ رقمه بجانب الجدول ويقول ما اختلف. الدرس للقائد: القاعدة التي يكون الخطأ فيها مالًا تُبنى في البرنامج. أرقام المدفوع زيادةً لحذف الموافقة وللضابط محسوبة من مخرجات البرنامج نفسه؛ أعد التحقق بـ <code>labs/solutions/check.py agent</code> إن سُئلت.</p></aside>
+</section>
 
 <!-- الجلسة 1 -->
 
-<section class="slide section" id="s1" data-auto="section" data-session="1"></section>
-
-<section class="slide" id="s1-idea">
-  <div class="kicker">REPLACE: السؤال الذي تجيب عنه الشريحة</div>
-  <h2>REPLACE: فكرة واحدة في جملة</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: ست نقاط على الأكثر، كل منها فكرة تامة</li>
-      <li>REPLACE: أبرز العبارة الأساسية، والأرقام من تشغيل المختبر لا من الذاكرة</li>
-    </ul>
-    <div class="card c-teal"><h4>في دراسة الحالة</h4><p class="small mb0">REPLACE: اربط الفكرة بدراسة الحالة وبياناتها</p></div>
-  </div>
-  <div class="callout warn mt"><b>أين يقع الخطأ.</b> REPLACE: الخطأ الذي سيقع فيه المشاركون، وكيف يتعرفون عليه</div>
-  <aside class="notes">REPLACE: ما تقوله، والعرض الحي، والسؤال للقاعة، والخطأ الشائع وحلّه</aside>
+<section class="slide section" id="s1" data-auto="section" data-session="1">
+  <aside class="notes"><p>الكتلة الأولى نحو 35 دقيقة على صلاحيات القرار؛ الثانية نحو 35 دقيقة على خارطة الطريق من ملف النضج؛ نقطتا تحقق؛ ثم المختبر.</p></aside>
 </section>
 
-<section class="slide" id="s1-steps">
-  <div class="kicker">خطوة بخطوة</div>
-  <h2>REPLACE: عملية تظهر خطوة مع كل ضغطة</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: الاسم</b>REPLACE: ما يحدث أولًا</div>
-    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: الاسم</b>REPLACE: الجزء التالي</div>
-    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: الاسم</b>REPLACE: النتيجة</div>
+<section class="slide" id="decision-matrix" data-lo="LO2">
+  <div class="kicker">صلاحيات القرار: الغموض والمخاطر</div>
+  <h2>محوران يحددان دور الذكاء الاصطناعي في القرار: وضوح الإجابة، وكلفة الخطأ</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>غموض منخفض، ومخاطر منخفضة</h4><p class="small mb0">قرارات روتينية: مرشحة للأتمتة، والإنسان قريب حتى تتكوّن الثقة.</p></div>
+    <div class="card c-amber"><h4>غموض منخفض، ومخاطر عالية</h4><p class="small mb0">قرارات ذات عواقب: توازن بين الأتمتة وتدخل الإنسان في الاستثناءات.</p></div>
+    <div class="card c-cyan"><h4>غموض عالٍ، ومخاطر منخفضة</h4><p class="small mb0">قرارات استكشافية: الإنسان والنموذج يصوغان السؤال معًا، والإنسان يشرف.</p></div>
+    <div class="card c-coral"><h4>غموض عالٍ، ومخاطر عالية</h4><p class="small mb0">قرارات استراتيجية: الإنسان يقود الصياغة والتعلم، والنموذج يساعد في التنفيذ.</p></div>
   </div>
-  <div class="callout tip mt frag"><b>الخلاصة.</b> REPLACE: الجملة التي تبقى في الذاكرة</div>
-  <aside class="notes">اضغط مرة لكل خطوة، وقل ما تضيفه كل خطوة قبل ظهور التالية. REPLACE: المثال الذي تشرحه</aside>
+  <div class="caption">ملخص من مصفوفة قرارات الذكاء الاصطناعي في قائمة المصادر، «صلاحيات القرار والوكلاء» (سبتمبر 2026).</div>
+  <aside class="notes"><p>المقال يؤكد أن الإشراف البشري باقٍ في الأربعة، ولا يصف أيًا منها بأن النموذج يقرر وحده. «الغموض»: هل تحسم البيانات والاتفاق الإجابة؟ «المخاطر»: عواقب القرار الخاطئ. المصفوفة أداة تفكير، وجدول صلاحياتك هو ما يُلزم.</p></aside>
+</section>
+
+<section class="slide" id="decision-table" data-lo="LO2">
+  <div class="kicker">جدول صلاحيات القرار</div>
+  <h2>كل سطر قرار واحد: من يقرر، ومن يُستشار، ودور النموذج فيه</h2>
+  <table class="t small">
+    <tr><th>القرار</th><th>الغموض / المخاطر</th><th>يقرر (ويُستشار)</th><th>دور النموذج</th></tr>
+    <tr><td>تصنيف طلبات الصيانة العادية</td><td>منخفض / منخفضة</td><td>مالك الخدمة (المكتب)</td><td>يقترح ويُراجع بالعينة</td></tr>
+    <tr><td>تمويل حالة جديدة</td><td>عالٍ / عالية</td><td>لجنة المحفظة (المالية والمخاطر)</td><td>يجمع الأدلة فقط</td></tr>
+    <tr><td>اعتماد أداة</td><td>منخفض / عالية</td><td>المكتب (الأمن وحماية البيانات)</td><td>لا دور</td></tr>
+  </table>
+  <div class="caption">مثال من مجموعة مرافق افتراضية، لا من الحالة.</div>
+  <aside class="notes"><p>القسم 3 من خطتك جدول بهذا الشكل لعشرة قرارات على الأقل. أضف عمودًا لمن يُبلَّغ إن احتجت. القرار الذي لا يجد سطرًا في الجدول يُقرَّر في الممرات.</p></aside>
+</section>
+
+<section class="slide" id="separation-of-duties" data-lo="LO2 LO4">
+  <div class="kicker">قاعدة لا تتغير</div>
+  <h2>من يملك الشيء لا يوافق على نفسه</h2>
+  <ul class="bullets">
+    <li>مالك الحالة لا يقرر وحده تمويلها ولا تمديدها بعد بلوغ معيار إيقافها</li>
+    <li>من يبني الوكيل لا يوافق على أفعاله، ولا يملك حزمة تقييمه وحده</li>
+    <li>المكتب الذي يضع السياسة لا يراجع التزامه بها: هذا للمراجعة الداخلية</li>
+  </ul>
+  <div class="callout warn mt"><b>في الجدول:</b> سطر فيه «يقرر» و«يُراجع» الدورَ نفسه يُعاد كتابته.</div>
+  <aside class="notes"><p>الفصل بين المهام سيظهر في كل إجابة مرجعية حتى نهاية البرنامج: في المحفظة، وفي مصفوفة الصلاحيات، وفي الحادثة. اطلب من كل مشارك أن يفحص سطرين من مسودته الآن.</p></aside>
+</section>
+
+<section class="slide" id="check-decision" data-lo="LO2">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>من يقرر هنا؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO2">
+    <p class="lead">في مجموعة مرافق افتراضية، نموذج يقترح إيقاف خدمة المياه عن الوحدات المتأخرة في الدفع. البيانات واضحة (مبلغ وتاريخ)، لكن الإيقاف الخاطئ يمس أسرة في منزلها. أي سطر يصلح لجدول الصلاحيات؟</p>
+    <div class="opts">
+      <div class="opt" data-ok>موظف التحصيل يقرر كل إيقاف، والنموذج يقترح ويعرض سببه</div>
+      <div class="opt" data-why="البيانات واضحة لكن الخطأ يمس أسرة: الوضوح لا يلغي كلفة الخطأ">النموذج يقرر الإيقاف وحده، فالبيانات واضحة ولا غموض فيها</div>
+      <div class="opt" data-why="يرفع قرارًا تشغيليًا متكررًا إلى لجنة لا تقرر في الحالات الفردية">لجنة المحفظة تقرر كل إيقاف بعد اجتماعها الشهري</div>
+      <div class="opt" data-why="المكتب يضع الطريقة، ولا يملك قرارات التحصيل اليومية">مكتب الذكاء الاصطناعي يقرر لأنه يملك النموذج</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> غموض منخفض ومخاطر عالية: النموذج يقترح، ومالك العمل يقرر في كل حالة.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: أ. أربع دقائق. اسأل: متى يصح أن يقرر النموذج؟ (حين ينخفض أثر الخطأ، كتذكير بالدفع قابل للتصحيح).</p></aside>
+</section>
+
+<section class="slide" id="adoption-framework" data-lo="LO1">
+  <div class="kicker">إطار تبني الذكاء الاصطناعي (سدايا)</div>
+  <h2>ثلاث ركائز وسبعة مكونات، والإطار لا يحدد مستويات نضج</h2>
+  <div class="cols cols-3">
+    <div class="card c-navy"><h4>التوجهات</h4><p class="small mb0">الاستراتيجية، والحوكمة</p></div>
+    <div class="card c-teal"><h4>الممكنات</h4><p class="small mb0">البيانات، والبنية التحتية، والقدرات البشرية</p></div>
+    <div class="card c-purple"><h4>المخرجات</h4><p class="small mb0">التطبيقات، والأثر</p></div>
+  </div>
+  <div class="callout note mt"><b>سلم النضج (0 إلى 4) في المختبر</b> من وضع المقرر، لا من الإطار.</div>
+  <aside class="notes"><p>الإطار موجه للجهات الحكومية والخاصة. يذكر الإطار أن المركز الوطني للذكاء الاصطناعي يعمل على مؤشر للجهات الحكومية؛ لا تقدّم سلم المقرر على أنه ذلك المؤشر. المصدر في قائمة المراجع.</p></aside>
+</section>
+
+<section class="slide" id="evidence-not-survey" data-lo="LO1">
+  <div class="kicker">ملف النضج</div>
+  <h2>الدرجة تُعطى بالدليل، والاستبيان يقول ما يظنه المديرون</h2>
+  <div class="cols cols-2">
+    <div class="card c-amber"><h4>الاستبيان</h4><p class="small mb0">«بياناتنا جيدة»: انطباع من يستعمل التقارير.</p></div>
+    <div class="card c-teal"><h4>الدليل</h4><p class="small mb0">كم مجموعة بيانات لها مالك وتصنيف؟ هل تتطابق الأرقام بين الأنظمة؟</p></div>
+  </div>
+  <div class="callout warn mt"><b>حين يختلفان:</b> الدليل هو الدرجة، والفرق نفسه معلومة للمجلس.</div>
+  <aside class="notes"><p>مثال موازٍ: مستشفى افتراضي قيّم «الحوكمة» 3 لأن لديه لجنة، والدليل يقول إن اللجنة لم تناقش نظامًا واحدًا في سنة: الدرجة 1. لا تذكر درجات الضمران؛ هذا عمل المختبر.</p></aside>
+</section>
+
+<section class="slide" id="constraints-first" data-lo="LO1">
+  <div class="kicker">من ملف النضج إلى الترتيب</div>
+  <h2>أدنى الممكنات يقرر ما يمكن أن ينطلق في الأفق الأول</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>1 · اقرأ</b>المكونات الأدنى بالدليل</div>
+    <div class="arrow">←</div>
+    <div class="step c-cyan"><b>2 · اربط</b>كل حالة بالممكنات التي تحتاج إليها</div>
+    <div class="arrow">←</div>
+    <div class="step c-purple"><b>3 · رتّب</b>الممكن قبل الحالة التي تعتمد عليه</div>
+    <div class="arrow">←</div>
+    <div class="step c-amber"><b>4 · اختر</b>حالات الأفق الأول من بين ما لا ينتظر</div>
+  </div>
+  <aside class="notes"><p>الأفق الأول ليس للممكنات وحدها: يحتاج المجلس إلى نتيجة مبكرة. اختر حالات لا تعتمد على الممكن الأضعف، كحالة على بيانات «عام» أو على بيانات موجودة في مكانها.</p></aside>
+</section>
+
+<section class="slide" id="horizons" data-lo="LO1">
+  <div class="kicker">ثلاثة آفاق</div>
+  <h2>كل مبادرة في الخارطة لها أفق، وشهر إطلاق، ومَعلم يثبت الإطلاق، وسبب</h2>
+  <table class="t small">
+    <tr><th>الأفق</th><th>الأشهر</th><th>ما يغلب عليه</th></tr>
+    <tr><td>الأول</td><td>1 إلى 12</td><td>المكتب والسياسة والممكنات الأضعف، وحالة أو حالتان لا تنتظران</td></tr>
+    <tr><td>الثاني</td><td>13 إلى 24</td><td>الحالات التي تحتاج إلى البيانات والفريق، وإيقاف ما حلت محله</td></tr>
+    <tr><td>الثالث</td><td>25 إلى 36</td><td>التوسيع، وما تنتظر قيمته موسمًا كاملًا</td></tr>
+  </table>
+  <aside class="notes"><p>المَعلم يُرى ويُتحقق منه: «المجموعات الست لها مالكون» لا «تحسين البيانات». أسقط ما لا يجد مكانًا، وقل ذلك للمجلس.</p></aside>
+</section>
+
+<section class="slide" id="inverted-dependency" data-lo="LO1">
+  <div class="kicker">التبعية المقلوبة</div>
+  <h2>أكثر أخطاء الخرائط شيوعًا: حالة تنطلق قبل ما تحتاج إليه</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>في مسودة جامعة افتراضية</h4><p class="small mb0">«الإنذار المبكر لتعثر الطلاب» في الأفق الأول، و«ربط أنظمة الطلاب» في الثاني.</p></div>
+    <div class="card c-teal"><h4>بعد التصحيح</h4><p class="small mb0">الربط في الأفق الأول، والإنذار المبكر في الثاني بعد الربط بأشهر.</p></div>
+  </div>
+  <div class="callout tip mt"><b>للمجلس:</b> قل ما يحصل عليه في السنة الأولى بدل ما طلبه، ومتى يحصل على ما طلبه.</div>
+  <aside class="notes"><p>برنامج الفحص في المختبر يكشف التبعية المقلوبة إذا كتبت شهور الإطلاق. لكنه لا يكشف تبعية لم تُكتب: اقرأ عمود التبعيات قبل أن تثق بالفحص.</p></aside>
+</section>
+
+<section class="slide" id="check-roadmap" data-lo="LO1">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>ما أول تعديل على هذه الخارطة؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO1">
+    <p class="lead">ملف نضج لشركة نقل افتراضية: القدرات البشرية 1 بالدليل (لا مهندس تعلم آلة)، والبيانات 3. الخارطة تضع «نموذج تسعير ديناميكي يبنيه فريق داخلي» في الشهر 6، و«توظيف الفريق» في الشهر 14. ما أول تعديل؟</p>
+    <div class="opts">
+      <div class="opt" data-why="البيانات ليست القيد هنا، فهي 3 بالدليل">تقديم منصة البيانات إلى الشهر 3 قبل النموذج</div>
+      <div class="opt" data-why="يحذف الحالة بدل ترتيبها بعد الفريق الذي تحتاج إليه">حذف نموذج التسعير من الخارطة كلها</div>
+      <div class="opt" data-ok>تقديم التوظيف، ونقل النموذج إلى ما بعد اكتمال الفريق</div>
+      <div class="opt" data-why="يغيّر الدرجة لتوافق الخطة بدل أن تتبع الخطة الدليل">رفع درجة القدرات البشرية إلى 2 لأن التوظيف مخطط</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> النموذج يحتاج إلى فريق لا يوجد قبل الشهر 14: التبعية مقلوبة، والقيد هو القدرات البشرية.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: ج. أربع دقائق. اسأل: ماذا لو لم يُوظَّف الفريق؟ (مورد يبني، والمكتب يملك التقييم: سؤال الأسبوع 8).</p></aside>
 </section>
 
 <section class="slide lab" id="lab-3-1" data-auto="lab" data-lab="3.1">
-  <aside class="notes">REPLACE: ما تراقبه أثناء عمل المشاركين، والمشكلات المعتادة، والبديل لمن لم يُنهِ مختبرًا سابقًا</aside>
+  <aside class="notes"><p>60 دقيقة، والذكاء الاصطناعي مرشد. جدول بيانات يكفي؛ برنامج الفحص يحتاج إلى <code>uv</code> فقط. راقب من يكتب درجة الاستبيان في عمود الدليل، ومن يضع حالة قبل ما تحتاج إليه. احفظ <code>my_roadmap.csv</code>: المختبر 4.1 يبدأ منه.</p></aside>
+</section>
+
+<section class="slide" id="section-3-brief" data-lo="LO2">
+  <div class="kicker">القسم 3 من الخطة: دراسة ذاتية، 60 دقيقة</div>
+  <h2>صفحة واحدة: جدول صلاحيات القرار</h2>
+  <ul class="bullets">
+    <li>عشرة قرارات على الأقل: التمويل، والإيقاف، واعتماد الأدوات، وصلاحيات الوكلاء، والحوادث</li>
+    <li>لكل قرار: الغموض، والمخاطر، ومن يقرر، ومن يُستشار، ودور النموذج</li>
+    <li>لا سطر يقرر فيه دور ويراجع نفسه</li>
+    <li>ما لم تحسمه بعد، ومن سيحسمه</li>
+  </ul>
+  <aside class="notes"><p>ابدأ من مخطط القسم 2: كل منتدى في المخطط يظهر في عمود «يقرر» مرة على الأقل. الذكاء الاصطناعي كامل في الصياغة، بنسخة غير سرية.</p></aside>
 </section>
 
 <section class="slide" id="wrap-up">
   <div class="kicker">خلاصة الأسبوع 3</div>
   <h2>ثلاثة أمور تبقى معك</h2>
   <div class="cols cols-3">
-    <div class="card c-teal"><h4>تذكّر</h4><p class="small mb0">REPLACE: فكرة يحتفظ بها المشاركون</p></div>
-    <div class="card c-coral"><h4>تذكّر</h4><p class="small mb0">REPLACE: فكرة يحتفظ بها المشاركون</p></div>
-    <div class="card c-purple"><h4>تذكّر</h4><p class="small mb0">REPLACE: فكرة يحتفظ بها المشاركون</p></div>
+    <div class="card c-teal"><h4>الغموض والمخاطر</h4><p class="small mb0">يحددان دور النموذج، والجدول يحدد من يقرر.</p></div>
+    <div class="card c-coral"><h4>الدليل قبل الاستبيان</h4><p class="small mb0">والفرق بينهما معلومة للمجلس.</p></div>
+    <div class="card c-purple"><h4>الممكن قبل الحالة</h4><p class="small mb0">والمَعلم يُرى ويُتحقق منه.</p></div>
   </div>
+  <aside class="notes"><p>جملة من كل مشارك: أي قرار في جهتك لا يجد اليوم سطرًا في أي جدول؟</p></aside>
 </section>
 
 <section class="slide dark" id="next" data-label="التالي">
   <div class="kicker">التالي</div>
-  <h2>الأسبوع 4: REPLACE: موضوع هذه الوحدة في كلمات قليلة</h2>
-  <p class="lead">REPLACE: ما يجهزه المشاركون قبل ذلك، والمختبرات غير المكتملة يمكن إكمالها في المنزل</p>
-  <aside class="notes">REPLACE: الحسابات أو التثبيتات أو القراءة التي يحتاجها المشاركون قبل الوحدة التالية</aside>
+  <h2>الأسبوع 4: البوابات والموازنة</h2>
+  <p class="lead">سلّم القسم 3، واحتفظ بخارطتك: ستسعّرها على ثلاث سنوات أمام سقف المجموعة.</p>
+  <aside class="notes"><p>اقرأ <code>labs/files/roadmap/budget_envelope.md</code> قبل الجلسة. من لم تكتمل خارطته يبدأ المختبر 4.1 من <code>labs/files/roadmap/fallback/roadmap_after_lab_3_1.csv</code>.</p></aside>
 </section>

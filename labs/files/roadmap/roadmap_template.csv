@@ -1,4 +1,4 @@
-﻿id,horizon_1_2_3,start_month,milestone,depends_on,reason
+﻿id,horizon_1_2_3,go_live_month,milestone,depends_on,reason
 I01,,,,,
 I02,,,,,
 I03,,,,I01,
