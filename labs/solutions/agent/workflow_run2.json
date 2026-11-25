@@ -1,0 +1,29 @@
+{
+  "name": "وكيل استفسارات الإرجاع والضمان",
+  "owner_role": "مدير خدمة العملاء في المتاجر",
+  "goal": "يجيب عن سؤال العميل عن الإرجاع أو الضمان بقرار واحد: refund أو repair أو decline أو escalate، مع المبلغ إن كان ردًا.",
+  "steps": [
+    "read_question",
+    "find_product",
+    "read_policy",
+    "decide",
+    "reply"
+  ],
+  "tools": [
+    "find_product",
+    "read_policy"
+  ],
+  "approval": {
+    "over_amount_sar": 2000,
+    "approver_role": "مشرف خدمة العملاء"
+  },
+  "budget": {
+    "calls_total": 80,
+    "steps_per_task": 6
+  },
+  "guards": {
+    "customer_text_is_data": false,
+    "ask_when_ambiguous": false
+  },
+  "instructions": "أنت وكيل خدمة عملاء في متاجر الضمران. أجب بإيجاز وبقرار واحد."
+}
