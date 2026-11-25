@@ -456,9 +456,9 @@
     "annual_cost_k": 130.0,
     "successes": 5400,
     "cpso_sar": 24.07,
-    "value_claimed_k": 243,
-    "value_traceable_k": 243,
-    "net_k": 113,
+    "value_claimed_k": 108,
+    "value_traceable_k": 108,
+    "net_k": -22,
     "y1_cost_k": 210
    },
    "UC12": {
@@ -481,7 +481,6 @@
    "UC02",
    "UC05",
    "UC07",
-   "UC11",
    "UC01",
    "UC03"
   ],
@@ -490,21 +489,32 @@
    "UC02",
    "UC05",
    "UC07",
-   "UC11"
+   "UC01"
   ],
-  "spent_k": 4120,
+  "spent_k": 4430,
   "stop": [
    "UC06"
   ],
-  "envelope_k": 4200,
-  "envelope_after_cut_k": 3570,
+  "envelope_k": 4450,
+  "envelope_after_cut_k": 3782,
   "funded_after_cut": [
    "UC12",
    "UC02",
    "UC05",
-   "UC11"
+   "UC11",
+   "UC01"
   ],
-  "spent_after_cut_k": 3080
+  "spent_after_cut_k": 3600,
+  "uc11_net_after_inject_k": 113,
+  "ranked_after_injects": [
+   "UC12",
+   "UC02",
+   "UC05",
+   "UC07",
+   "UC11",
+   "UC01",
+   "UC03"
+  ]
  },
  "incident": {
   "shifts": 240,

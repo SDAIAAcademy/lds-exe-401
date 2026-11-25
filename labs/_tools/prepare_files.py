@@ -398,11 +398,12 @@ USECASES = [
     ('UC08', 'تقنية المعلومات', 'مساعد البرمجة للمطورين', 'توليدي', 'مقيد', 'رئيس تقنية المعلومات', 'تشغيل', 2, 2, 0, 420, 0, 0.0, 0, 'لا بند: تُقاس نسبة الاستخدام الأسبوعي (90%)', 0, 0, 'لم يُكتب معيار', 'لا'),
     ('UC09', 'المشتريات', 'مراجعة بنود العقود بنموذج توليدي', 'توليدي', 'سري', 'مدير المشتريات', 'فكرة', 2, 3, 500, 200, 1400, 0.80, 600, 'المشتريات: أتعاب المحامين الخارجيين', 672, 600, 'لم يُكتب معيار', 'لا'),
     ('UC10', 'التوزيع', 'تنبيهات سلامة السائقين من الكاميرات', 'تعلم آلي', 'سري', '', 'فكرة', 3, 4, 1100, 380, 2600, 0.70, 900, 'التوزيع: تكاليف الحوادث والتأمين', 1638, 900, 'لم يُكتب معيار', 'لا'),
-    ('UC11', 'المتاجر', 'كتابة أوصاف المنتجات للمتجر الإلكتروني', 'توليدي', 'عام', 'مدير المتجر الإلكتروني', 'تجربة', 2, 1, 120, 90, 6000, 0.90, 45, 'المتاجر: أتعاب كتّاب المحتوى المتعاقدين', 243, 45, 'أقل من 85% قبولًا من المحرر', 'لا'),
+    ('UC11', 'المتاجر', 'كتابة أوصاف المنتجات للمتجر الإلكتروني', 'توليدي', 'عام', 'مدير المتجر الإلكتروني', 'تجربة', 2, 1, 120, 90, 6000, 0.90, 20, 'المتاجر: أتعاب كتّاب المحتوى المتعاقدين', 108, 20, 'أقل من 85% قبولًا من المحرر', 'لا'),
     ('UC12', 'إدارة الأملاك', 'تحسين استهلاك التكييف في المجمعات', 'تعلم آلي', 'مقيد', 'المدير العام لإدارة الأملاك', 'فكرة', 2, 2, 700, 150, 5110, 0.83, 420, 'إدارة الأملاك: الكهرباء والمياه', 1781, 420, 'أقل من 6% خفضًا للاستهلاك في صيف التجربة', 'لا'),
 ]
-PORTFOLIO_ENVELOPE_Y1 = 4200  # build + first-year run, thousands
+PORTFOLIO_ENVELOPE_Y1 = 4450  # build + one full year of run per funded case, whatever its roadmap year; thousands
 INJECT_CUT = 0.15
+INJECT_UC11_VPS = 45  # inject 2: value per description the finance director accepts
 
 
 def risk_level(l, i):
@@ -458,8 +459,14 @@ def portfolio_files():
 - القيمة القابلة للتتبع = النتائج الناجحة × القيمة لكل نتيجة **في بند موجود في الحسابات وبمبلغ يقبله المدير المالي**.
 - صافي القيمة السنوية = القيمة القابلة للتتبع − التكلفة السنوية.
 
+## الترتيب
+القاعدة المقترحة: رتّب الحالات التي عبرت المرشِّحات ولها صافي قيمة موجب بصافي القيمة لكل ريال من تكلفة سنتها الأولى،
+ثم موّل بالترتيب ما دام السقف يتسع، وخمس حالات على الأكثر. للجنة أن تخالف الترتيب بسبب مكتوب في الورقة.
+
 ## السقف
-سقف السنة الأولى للمحفظة: {PORTFOLIO_ENVELOPE_Y1:,} ألف ريال (البناء + تشغيل السنة الأولى كاملة).
+سقف المحفظة: {PORTFOLIO_ENVELOPE_Y1:,} ألف ريال لتكلفة السنة الأولى من عمر الحالات الممولة (البناء + سنة تشغيل كاملة)،
+أيًا كانت سنة بنائها. التمويل هنا التزام بالحالة في الخطة؛ أما سنة البناء فتتبع خارطة الطريق: حالة تعتمد على ممكن
+لم يُطلق بعد لا تُبنى قبله.
 """)
     w(FILES / 'portfolio' / 'committee_roles.md', """
 # بطاقات أدوار لجنة المحفظة
@@ -475,7 +482,7 @@ def portfolio_files():
 | المراقبون | يقيّمون الأسئلة والقرار بسلم المحاكاة |
 """)
     w(FILES / 'portfolio' / 'committee_paper_template.md', """
-# ورقة لجنة المحفظة
+# ورقة لجنة المحفظة (ثلاث صفحات على الأكثر)
 
 1. القرار في سطرين: الحالات الخمس الممولة، والحالة الموقوفة.
 2. جدول الحالات الاثنتي عشرة: المرشِّح الذي سقطت عنده، أو التكلفة لكل نتيجة ناجحة وصافي القيمة القابلة للتتبع.
@@ -484,6 +491,47 @@ def portfolio_files():
 5. ما أُعيد للعمل أو أُجّل، والشرط لعودته.
 6. أثر المدخلات المباشرة على القرار.
 """)
+    w(FILES / 'portfolio' / 'observer_sheet.md', """
+# ورقة المراقب في يوم المحاكاة (أداة المقرر)
+
+يملأ المراقب الورقة لكل لجنة، ولا يتدخل. تعود الملاحظات إلى المشاركين في المراجعة بعد المحاكاة، ويستعملها المدرب
+مع ورقة اللجنة في تقدير «المحاكاة تحت الملاحظة».
+
+| ما يُلاحظ | 0 | 1 | 2 |
+|---|---|---|---|
+| المرشِّحات قبل الحساب | لم تُطبق | طُبق بعضها | طُبقت كلها، وسُمّي المرشِّح لكل حالة سقطت |
+| القيمة في بند | قُبلت أرقام المالكين كما هي | سُئل عن البند دون أثر في القرار | قُبل ما في الحسابات وحده، وقيل لماذا |
+| معيار الإيقاف | مُدّدت حالة بلغت معيارها | نوقش ولم يُحسم | طُبق، وحُفظ ما تعلّمه الفريق |
+| الفصل بين المهام | قرر مالك في حالته | نبّه أحد ولم يتغير شيء | لم يقرر أحد في ما يملكه |
+| المدخلات المباشرة | تجاهلتها اللجنة أو أعادت كل شيء | غيّرت القرار دون سبب مكتوب | غيّرت ما يجب وحده، بسبب مكتوب |
+""")
+
+
+DECISION_HEADER = ['id', 'filter', 'accepted_value_per_success_sar', 'decision', 'reason']
+DECISIONS_REF = {
+    'UC01': ('', '', 'fund', 'يعبر المرشِّحات؛ بند الرواتب موجود'),
+    'UC02': ('', '', 'fund', 'أعلى صافي قيمة؛ بند التالف موجود'),
+    'UC03': ('', '9', 'return', 'المقبول 9 ريالات وقود فقط: لا توظيف في الخطة؛ يعود لمالكه'),
+    'UC04': ('data_rule', '', '', 'توليدي على بيانات مقيدة'),
+    'UC05': ('', '', 'fund', 'يبنى بعد منصة البيانات في سنته من الخارطة'),
+    'UC06': ('kill_met', '', 'stop', '61% أمام معيار 75% بعد ربعين'),
+    'UC07': ('', '', 'fund', 'يبنى بعد المنصة والفريق في سنته من الخارطة'),
+    'UC08': ('data_rule', '', '', 'توليدي على بيانات مقيدة، ونسبة الاستخدام ليست نتيجة'),
+    'UC09': ('data_rule', '', '', 'توليدي على بيانات سرية'),
+    'UC10': ('no_owner', '', '', 'لا مالك من وحدات العمل'),
+    'UC11': ('', '', 'return', 'صافي القيمة سالب: التكلفة أكبر من أتعاب الكتّاب'),
+    'UC12': ('', '', 'fund', 'بند الكهرباء موجود'),
+}
+
+
+def portfolio_solutions():
+    wcsv(FILES / 'portfolio' / 'decisions_template.csv', DECISION_HEADER, [[u[0], '', '', '', ''] for u in USECASES])
+    sol = SOL / 'portfolio'
+    wcsv(sol / 'decisions_reference.csv', DECISION_HEADER, [[k, *v] for k, v in DECISIONS_REF.items()])
+    after = dict(DECISIONS_REF)
+    after['UC07'] = ('', '', 'defer', 'خفض السقف 15%: لا يتسع؛ يعود إلى لجنة السنة الثانية حين تُطلق المنصة')
+    after['UC11'] = ('', str(INJECT_UC11_VPS), 'fund', 'أكد المدير المالي أن عقد الكتّاب لا يُجدد: 45 ريالًا للوصف في بند قائم')
+    wcsv(sol / 'decisions_after_cut.csv', DECISION_HEADER, [[k, *v] for k, v in after.items()])
 
 
 def portfolio_reference():
@@ -518,14 +566,21 @@ def portfolio_reference():
             funded.append(k)
             spent += out[k]['y1_cost_k']
     cut_env = round(PORTFOLIO_ENVELOPE_Y1 * (1 - INJECT_CUT))
+    # inject 2: the finance director accepts 45 SAR per description for UC11 (the writers' contract is not renewed)
+    u11 = next(u for u in USECASES if u[0] == 'UC11')
+    after = {k: dict(v) for k, v in out.items()}
+    after['UC11']['net_k'] = round(round(u11[11] * u11[12] * INJECT_UC11_VPS / 1000) - (u11[10] + u11[9] / 3))
+    cands_after = [k for k, v in after.items() if v['filter'] is None and v['net_k'] > 0]
+    ranked_after = sorted(cands_after, key=lambda k: after[k]['net_k'] / after[k]['y1_cost_k'], reverse=True)
     funded_cut, spent_cut = [], 0
-    for k in ranked:
-        if spent_cut + out[k]['y1_cost_k'] <= cut_env:
+    for k in ranked_after:
+        if spent_cut + after[k]['y1_cost_k'] <= cut_env and len(funded_cut) < 5:
             funded_cut.append(k)
-            spent_cut += out[k]['y1_cost_k']
+            spent_cut += after[k]['y1_cost_k']
     return {'cases': out, 'candidates_ranked': ranked, 'funded': funded, 'spent_k': spent,
             'stop': [k for k, v in out.items() if v['filter'] == 'kill_met'],
-            'envelope_k': PORTFOLIO_ENVELOPE_Y1, 'envelope_after_cut_k': cut_env, 'funded_after_cut': funded_cut, 'spent_after_cut_k': spent_cut}
+            'envelope_k': PORTFOLIO_ENVELOPE_Y1, 'envelope_after_cut_k': cut_env, 'funded_after_cut': funded_cut, 'spent_after_cut_k': spent_cut,
+            'uc11_net_after_inject_k': after['UC11']['net_k'], 'ranked_after_injects': ranked_after}
 
 
 # ---------------------------------------------------------------- policy
@@ -688,6 +743,7 @@ def main():
     roadmap_files()
     roadmap_solutions()
     portfolio_files()
+    portfolio_solutions()
     policy_files()
     rows, tool, true = incident_files(rng)
     tool_days = sum(len(v) for v in tool.values())

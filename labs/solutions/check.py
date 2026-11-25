@@ -116,6 +116,13 @@ def check_portfolio():
         expect(f'{k} net', v['net'], REF['portfolio']['cases'][k]['net_k'])
         expect(f'{k} cost per success', v['cpso'], REF['portfolio']['cases'][k]['cpso_sar'])
     p = REF['portfolio']
+    tool = LABS / 'portfolio' / 'portfolio_calc.py'
+    for name, env, funded, spent in (('decisions_reference.csv', p['envelope_k'], p['funded'], p['spent_k']),
+                                     ('decisions_after_cut.csv', p['envelope_after_cut_k'], p['funded_after_cut'], p['spent_after_cut_k'])):
+        r = subprocess.run([sys.executable, str(tool), str(SOL / 'portfolio' / name), '--envelope', str(env)], capture_output=True, text=True, encoding='utf-8')
+        expect(f'{name} exit code', r.returncode, 0)
+        line = f"funded: {', '.join(sorted(funded))} ({len(funded)} cases); year-1 cost {spent:,} of {env:,}"
+        expect(f'{name} funded line', line in r.stdout, True)
     print(f'portfolio: fund {p["funded"]} ({p["spent_k"]} of {p["envelope_k"]}), stop {p["stop"]}; after the 15% cut: {p["funded_after_cut"]}')
     print('PASS portfolio')
 
