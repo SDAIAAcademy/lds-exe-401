@@ -1,0 +1,550 @@
+{
+ "roadmap": {
+  "horizon": {
+   "I01": 1,
+   "I02": 1,
+   "I03": 1,
+   "I04": 1,
+   "I05": 1,
+   "I06": 1,
+   "I07": 1,
+   "I08": 2,
+   "I11": 1,
+   "I13": 1,
+   "I09": 2,
+   "I10": 2,
+   "I12": 2,
+   "I14": 3
+  },
+  "inverted_dependencies_in_go_live": [],
+  "board_inverted": "I09 before I02 in the board draft (horizon 1 vs horizon 2)",
+  "lines": {
+   "I01": {
+    "build": [
+     900,
+     0,
+     0
+    ],
+    "run": [
+     675,
+     900,
+     900
+    ],
+    "retire": [
+     0,
+     0,
+     0
+    ]
+   },
+   "I02": {
+    "build": [
+     1600,
+     900,
+     0
+    ],
+    "run": [
+     0,
+     450,
+     450
+    ],
+    "retire": [
+     0,
+     0,
+     0
+    ]
+   },
+   "I03": {
+    "build": [
+     250,
+     0,
+     0
+    ],
+    "run": [
+     60,
+     120,
+     120
+    ],
+    "retire": [
+     0,
+     0,
+     0
+    ]
+   },
+   "I04": {
+    "build": [
+     400,
+     0,
+     0
+    ],
+    "run": [
+     90,
+     180,
+     180
+    ],
+    "retire": [
+     0,
+     0,
+     0
+    ]
+   },
+   "I05": {
+    "build": [
+     300,
+     300,
+     200
+    ],
+    "run": [
+     0,
+     0,
+     0
+    ],
+    "retire": [
+     0,
+     0,
+     0
+    ]
+   },
+   "I06": {
+    "build": [
+     400,
+     0,
+     0
+    ],
+    "run": [
+     325,
+     1300,
+     1300
+    ],
+    "retire": [
+     0,
+     0,
+     0
+    ]
+   },
+   "I07": {
+    "build": [
+     300,
+     0,
+     0
+    ],
+    "run": [
+     55,
+     220,
+     220
+    ],
+    "retire": [
+     0,
+     0,
+     0
+    ]
+   },
+   "I08": {
+    "build": [
+     0,
+     0,
+     0
+    ],
+    "run": [
+     0,
+     0,
+     0
+    ],
+    "retire": [
+     0,
+     60,
+     0
+    ]
+   },
+   "I09": {
+    "build": [
+     0,
+     800,
+     0
+    ],
+    "run": [
+     0,
+     80,
+     240
+    ],
+    "retire": [
+     0,
+     0,
+     0
+    ]
+   },
+   "I10": {
+    "build": [
+     0,
+     650,
+     0
+    ],
+    "run": [
+     0,
+     105,
+     210
+    ],
+    "retire": [
+     0,
+     0,
+     0
+    ]
+   },
+   "I11": {
+    "build": [
+     900,
+     0,
+     0
+    ],
+    "run": [
+     43,
+     260,
+     260
+    ],
+    "retire": [
+     0,
+     0,
+     0
+    ]
+   },
+   "I12": {
+    "build": [
+     0,
+     1200,
+     0
+    ],
+    "run": [
+     0,
+     50,
+     300
+    ],
+    "retire": [
+     0,
+     0,
+     0
+    ]
+   },
+   "I13": {
+    "build": [
+     150,
+     100,
+     100
+    ],
+    "run": [
+     0,
+     0,
+     0
+    ],
+    "retire": [
+     0,
+     0,
+     0
+    ]
+   },
+   "I14": {
+    "build": [
+     0,
+     0,
+     700
+    ],
+    "run": [
+     0,
+     0,
+     75
+    ],
+    "retire": [
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  "legacy": [
+   180,
+   45,
+   0
+  ],
+  "build": [
+   5200,
+   3950,
+   1000
+  ],
+  "run": [
+   1248,
+   3665,
+   4255
+  ],
+  "retire": [
+   0,
+   60,
+   0
+  ],
+  "totals": [
+   6628,
+   7720,
+   5255
+  ],
+  "caps": [
+   6200,
+   7800,
+   5600
+  ],
+  "over_cap": [
+   428,
+   -80,
+   -345
+  ],
+  "build_only_vs_cap": [
+   1000,
+   3850,
+   4600
+  ],
+  "legacy_if_never_retired": [
+   180,
+   180,
+   180
+  ],
+  "run_share_y3": 0.81
+ },
+ "portfolio": {
+  "cases": {
+   "UC01": {
+    "filter": null,
+    "risk": [
+     4,
+     "متوسط"
+    ],
+    "annual_cost_k": 320.0,
+    "successes": 28800,
+    "cpso_sar": 11.11,
+    "value_claimed_k": 518,
+    "value_traceable_k": 518,
+    "net_k": 198,
+    "y1_cost_k": 520
+   },
+   "UC02": {
+    "filter": null,
+    "risk": [
+     6,
+     "متوسط"
+    ],
+    "annual_cost_k": 560.0,
+    "successes": 8640,
+    "cpso_sar": 64.81,
+    "value_claimed_k": 2246,
+    "value_traceable_k": 2246,
+    "net_k": 1686,
+    "y1_cost_k": 1160
+   },
+   "UC03": {
+    "filter": null,
+    "risk": [
+     4,
+     "متوسط"
+    ],
+    "annual_cost_k": 700.0,
+    "successes": 110400,
+    "cpso_sar": 6.34,
+    "value_claimed_k": 2318,
+    "value_traceable_k": 994,
+    "net_k": 294,
+    "y1_cost_k": 1500
+   },
+   "UC04": {
+    "filter": "data_rule",
+    "risk": [
+     4,
+     "متوسط"
+    ],
+    "annual_cost_k": 313.3,
+    "successes": 40800,
+    "cpso_sar": 7.68,
+    "value_claimed_k": 449,
+    "value_traceable_k": 449,
+    "net_k": 136,
+    "y1_cost_k": 580
+   },
+   "UC05": {
+    "filter": null,
+    "risk": [
+     6,
+     "متوسط"
+    ],
+    "annual_cost_k": 426.7,
+    "successes": 132000,
+    "cpso_sar": 3.23,
+    "value_claimed_k": 1188,
+    "value_traceable_k": 1188,
+    "net_k": 761,
+    "y1_cost_k": 860
+   },
+   "UC06": {
+    "filter": "kill_met",
+    "risk": [
+     9,
+     "مرتفع"
+    ],
+    "annual_cost_k": 276.7,
+    "successes": 5490,
+    "cpso_sar": 50.39,
+    "value_claimed_k": 121,
+    "value_traceable_k": 121,
+    "net_k": -156,
+    "y1_cost_k": 510
+   },
+   "UC07": {
+    "filter": null,
+    "risk": [
+     4,
+     "متوسط"
+    ],
+    "annual_cost_k": 506.7,
+    "successes": 76960,
+    "cpso_sar": 6.58,
+    "value_claimed_k": 1077,
+    "value_traceable_k": 1077,
+    "net_k": 570,
+    "y1_cost_k": 1040
+   },
+   "UC08": {
+    "filter": "data_rule",
+    "risk": [
+     4,
+     "متوسط"
+    ],
+    "annual_cost_k": 420.0,
+    "successes": 0,
+    "cpso_sar": null,
+    "value_claimed_k": 0,
+    "value_traceable_k": 0,
+    "net_k": -420,
+    "y1_cost_k": 420
+   },
+   "UC09": {
+    "filter": "data_rule",
+    "risk": [
+     6,
+     "متوسط"
+    ],
+    "annual_cost_k": 366.7,
+    "successes": 1120,
+    "cpso_sar": 327.38,
+    "value_claimed_k": 672,
+    "value_traceable_k": 672,
+    "net_k": 305,
+    "y1_cost_k": 700
+   },
+   "UC10": {
+    "filter": "no_owner",
+    "risk": [
+     12,
+     "مرتفع"
+    ],
+    "annual_cost_k": 746.7,
+    "successes": 1820,
+    "cpso_sar": 410.26,
+    "value_claimed_k": 1638,
+    "value_traceable_k": 1638,
+    "net_k": 891,
+    "y1_cost_k": 1480
+   },
+   "UC11": {
+    "filter": null,
+    "risk": [
+     2,
+     "منخفض"
+    ],
+    "annual_cost_k": 130.0,
+    "successes": 5400,
+    "cpso_sar": 24.07,
+    "value_claimed_k": 108,
+    "value_traceable_k": 108,
+    "net_k": -22,
+    "y1_cost_k": 210
+   },
+   "UC12": {
+    "filter": null,
+    "risk": [
+     4,
+     "متوسط"
+    ],
+    "annual_cost_k": 383.3,
+    "successes": 4241,
+    "cpso_sar": 90.38,
+    "value_claimed_k": 1781,
+    "value_traceable_k": 1781,
+    "net_k": 1398,
+    "y1_cost_k": 850
+   }
+  },
+  "candidates_ranked": [
+   "UC12",
+   "UC02",
+   "UC05",
+   "UC07",
+   "UC01",
+   "UC03"
+  ],
+  "funded": [
+   "UC12",
+   "UC02",
+   "UC05",
+   "UC07",
+   "UC01"
+  ],
+  "spent_k": 4430,
+  "stop": [
+   "UC06"
+  ],
+  "envelope_k": 4450,
+  "envelope_after_cut_k": 3782,
+  "funded_after_cut": [
+   "UC12",
+   "UC02",
+   "UC05",
+   "UC11",
+   "UC01"
+  ],
+  "spent_after_cut_k": 3600,
+  "uc11_net_after_inject_k": 113,
+  "ranked_after_injects": [
+   "UC12",
+   "UC02",
+   "UC05",
+   "UC07",
+   "UC11",
+   "UC01",
+   "UC03"
+  ]
+ },
+ "incident": {
+  "shifts": 240,
+  "drivers": 60,
+  "crossing_midnight": 104,
+  "tool_flag_days": 33,
+  "true_flag_days": 21,
+  "tool_flagged_drivers": 30,
+  "true_flagged_drivers": 21,
+  "false_flag_drivers": [
+   "DRV-011",
+   "DRV-015",
+   "DRV-018",
+   "DRV-024",
+   "DRV-032",
+   "DRV-037",
+   "DRV-038",
+   "DRV-049",
+   "DRV-060"
+  ],
+  "warned_by_tool": [
+   "DRV-007",
+   "DRV-026",
+   "DRV-029"
+  ],
+  "warned_if_correct": [],
+  "wrong_warnings": [
+   "DRV-007",
+   "DRV-026",
+   "DRV-029"
+  ]
+ }
+}

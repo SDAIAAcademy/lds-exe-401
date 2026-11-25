@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 2.1 · غيّر شيئًا واحدًا وسجّل التشغيل الثاني · قيادة مكتب الذكاء الاصطناعي المؤسسي</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="W2_1_agent_run2.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/week2.html#lab-2-1">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 2.1</span>
+<h1>غيّر شيئًا واحدًا وسجّل التشغيل الثاني</h1>
+<p>تختار نمط الفشل الأعلى كلفة من التشغيل الأول، وتغيّر شيئًا واحدًا في تعريف مسار العمل، وتشغّل التشغيل الثاني بالميزانية نفسها، وتقارن التشغيلين تمهيدًا لمذكرة التقييم.</p>
+<div class="meta"><span>60 دقيقة</span><span>الأسبوع 2</span><span>الجلسة 1: مركزي أم محور وأطراف أم اتحادي</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="2.1">
+  <div class="box goal">
+    <h3>ستخرج من هذا المختبر بـ</h3>
+    <ul>
+      <li>تشغيل ثانٍ مسجَّل للوكيل نفسه على المهام العشرين نفسها، بتغيير واحد كتبت توقعه قبل التشغيل.</li>
+      <li>جدول مقارنة بين التشغيلين، وقائمة بما يحتاج إلى مالك قبل أي تشغيل فعلي: مادة مذكرة التقييم.</li>
+    </ul>
+  </div>
+
+  <h2>ما تحتاجه</h2>
+  <div class="files">
+    <a href="files/agent/tasks.csv" target="_blank"><b>agent/tasks.csv</b><span>المهام العشرون نفسها: لا تغيّرها</span></a>
+    <a href="files/agent/fallback/workflow_after_lab_1_1.json" target="_blank"><b>agent/fallback/workflow_after_lab_1_1.json</b><span>تعريف بديل لمن لم يُكمل المختبر 1.1</span></a>
+    <a href="agent/run_agent.py" target="_blank"><b>agent/run_agent.py</b><span>البرنامج نفسه</span></a>
+  </div>
+  <p class="small">تبدأ من تعريفك ومن مجلد <code>runs/run1</code>. من لم يُكمل المختبر 1.1 يشغّل الملف البديل باسم <code>run1</code> أولًا. سياسة الذكاء الاصطناعي: الذكاء الاصطناعي مرشدًا. الملفات اصطناعية ومصنفة «عام».</p>
+
+  <h2>الخطوات</h2>
+
+  <div class="step">
+    <h3>1 · اختر نمط الفشل الأعلى كلفة من التشغيل الأول <span class="min">8 د</span></h3>
+    <p>رتّب أنماط الفشل في التشغيل الأول مرتين: بعدد المهام، وبالمال المدفوع زيادةً أو المعرّض. اختر النمط الذي تريد علاجه، واكتب سبب اختيارك في سطر.</p>
+  </div>
+
+  <div class="step">
+    <h3>2 · صمّم تغييرًا واحدًا في التعريف واكتب ما تتوقعه قبل التشغيل <span class="min">10 د</span></h3>
+    <p>انسخ تعريفك إلى ملف جديد، وغيّر فيه شيئًا واحدًا فقط: خطوة، أو أداة، أو ضابطًا، أو حدًا. ثم اكتب قبل التشغيل: كم مهمة ستنجح، وكم استدعاءً ستستعمل، وأي نمط فشل سيختفي.</p>
+  </div>
+
+  <div class="step">
+    <h3>3 · شغّل التشغيل الثاني بالميزانية نفسها <span class="min">10 د</span></h3>
+    <pre class="code" data-file="الطرفية"><code>uv run labs/agent/run_agent.py labs/files/agent/my_workflow_2.json --label run2</code></pre>
+    <p>بالطريق نفسه الذي استعملته في التشغيل الأول (نموذج مستضاف أو البديل المكتوب بسيناريو)، وإلا فلا مقارنة.</p>
+  </div>
+
+  <div class="step">
+    <h3>4 · قارن التشغيلين: النجاح والتكلفة لكل نتيجة ناجحة وأنماط الفشل <span class="min">15 د</span></h3>
+    <table>
+      <tr><th>المقياس</th><th>التشغيل الأول</th><th>التشغيل الثاني</th><th>توقعك</th></tr>
+      <tr><td>النجاح من 20</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>الاستدعاءات من الميزانية</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>التكلفة لكل نتيجة ناجحة</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>المدفوع زيادةً</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>أنماط الفشل الباقية</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
+    <p>افتح أثر مهمة واحدة تغيّرت نتيجتها، وتأكد أن التغيير جاء من تعديلك لا من شيء آخر.</p>
+  </div>
+
+  <div class="step">
+    <h3>5 · حدّد ما يحتاج إلى مالك قبل أي تشغيل فعلي <span class="min">10 د</span></h3>
+    <p>لكل نمط فشل باقٍ: هل يعالجه تعديل في التعريف، أم أداة يملكها البرنامج، أم إنسان في كل مرة؟ ومن يملك القرار في المتاجر: مالك الوكيل، أم مالك حزمة التقييم، أم الموافِق؟</p>
+  </div>
+
+  <div class="step">
+    <h3>6 · جهّز نقاط مذكرة التقييم <span class="min">7 د</span></h3>
+    <p>المذكرة تُكتب بعد المختبر في كتلة تقييم مدتها 60 دقيقة، صفحتين على الأكثر: السؤال، والإعداد (الطريق والميزانية والتغيير)، والأرقام من التشغيلين، وأنماط الفشل، والقرار (يمضي، أو يُعاد العمل عليه، أو يتوقف)، والمالك، وما لم يُختبر.</p>
+  </div>
+
+  <div class="step stretch">
+    <h3>✱ إضافي</h3>
+    <p>خفّض الميزانية إلى النصف وأعد التشغيل الثاني باسم <code>run2_half</code>: أي المهام تسقط أولًا، ولماذا؟</p>
+  </div>
+
+  <h2>أسئلة تحقق</h2>
+  <ol class="checks">
+    <li>هل جاء التحسن من تعديلك وحده؟ كيف تعرف؟</li>
+    <li>هل انخفضت التكلفة لكل نتيجة ناجحة، أم ارتفعت؟ وهل يهم ذلك أمام المال المدفوع زيادةً؟</li>
+    <li>ما الذي لا تقوله عشرون مهمة عن الوكيل في المتاجر كلها؟</li>
+  </ol>
+
+  <details class="instructor">
+    <summary>للمدرّب: مفتاح المختبر</summary>
+    <ul>
+      <li><b>التشغيل الأول المرجعي (البديل المكتوب):</b> 11 من 20، و48 استدعاءً، ونحو 0.0022 ريال لكل نتيجة ناجحة، و5,071.45 ريال مدفوعة زيادةً. أعلى نمط بالمال: مدة الأجهزة الكبيرة لم تُطبَّق (4,490 ريالًا في T03 وT07 وT17). أعلى نمط بالاستدعاءات: الحلقة على المنتج الغامض (12 استدعاءً في T08 وT20).</li>
+      <li><b>التغييرات الممكنة ونتائجها بالبديل المكتوب (كل منها تغيير واحد على التشغيل الأول المرجعي):</b> إضافة الأداة <code>calc_refund</code>: 17 من 20، و60 استدعاءً، ونحو 0.0019 ريال لكل نتيجة ناجحة، و329 ريالًا مدفوعة زيادةً (التعريف المرجعي للتشغيل الثاني في <code>labs/solutions/agent/workflow_run2.json</code>). إضافة الخطوة <code>read_policy</code>: 14 من 20، و66 استدعاءً، و581.45 ريالًا. الضابط <code>ask_when_ambiguous</code>: 13 من 20، و40 استدعاءً، وأقل تكلفة لكل نتيجة (0.0015). الضابط <code>customer_text_is_data</code>: 12 من 20. حذف نقطة الموافقة: 8 من 20 (missed_approval في ثلاث). رفع <code>steps_per_task</code> إلى 20: النجاح نفسه بـ 76 استدعاءً.</li>
+      <li><b>الدرس:</b> الأداة التي يملكها البرنامج (الحاسبة تطبق المدة والرسم) أصلح من تعليمات تطلب من النموذج قراءة السياسة. وكل التغييرات الأربعة معًا: 20 من 20 بـ 70 استدعاءً؛ لكنها أربعة تغييرات، فلا يُعرف أثر كل منها.</li>
+      <li><b>الإضافي:</b> التعريف المرجعي للتشغيل الثاني بميزانية 40: 12 من 20، وتسقط آخر ست مهام لأن البرنامج يستهلك الميزانية بترتيب المهام. الدرس: الميزانية تُوزَّع على المهام، وإلا سقطت مهام بعينها دون أن يقرر أحد ذلك.</li>
+      <li>التحقق: <code>uv run labs/solutions/check.py agent</code>.</li>
+      <li><b>فصل المهام:</b> من غيّر التعريف لا يحكم وحده بأن التغيير نجح؛ المقارنة على الحزمة الثابتة نفسها، ويعتمد التشغيل الثاني مالك العمل لا من بناه. وحذف نقطة الموافقة ليس تحسينًا ولو قلّت الاستدعاءات.</li>
+    </ul>
+  </details>
+</article>
+<nav class="pager"><a href="W1_1_agent_run1.html" rel="prev">→ المختبر السابق</a><a href="W3_1_roadmap_horizons.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · قيادة مكتب الذكاء الاصطناعي المؤسسي<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-25⁩ · الإيداع bab2612</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-25T01:30:04Z","version":"2027.1.0","commit":"bab2612"},"course":{"id":"lds-exe-401","code":"LDS-EXE-401","title":"قيادة مكتب الذكاء الاصطناعي المؤسسي","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-exe-401/","repo":"SDAIAAcademy/lds-exe-401","home":"../index.html"},"lab":{"id":"2.1","title":"غيّر شيئًا واحدًا وسجّل التشغيل الثاني","summary":"تختار نمط الفشل الأعلى كلفة من التشغيل الأول، وتغيّر شيئًا واحدًا في تعريف مسار العمل، وتشغّل التشغيل الثاني بالميزانية نفسها، وتقارن التشغيلين تمهيدًا لمذكرة التقييم.","minutes":60,"day":2,"unit":"الأسبوع 2","session":1,"deck":"../slides/week2.html#lab-2-1","prev":"W1_1_agent_run1.html","next":"W3_1_roadmap_horizons.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

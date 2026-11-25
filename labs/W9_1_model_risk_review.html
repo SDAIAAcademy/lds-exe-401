@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 9.1 · قبل المحاكاة: مراجعة مخاطر أداة بناها موظف · قيادة مكتب الذكاء الاصطناعي المؤسسي</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="W9_1_model_risk_review.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/week9.html#lab-9-1">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 9.1</span>
+<h1>قبل المحاكاة: مراجعة مخاطر أداة بناها موظف</h1>
+<p>تراجع أداة لرصد العمل الإضافي بناها مشرف في شركة التوزيع: تعيد حساب إشاراتها من سجل المناوبات، وتحدد سبب الخطأ، وتقدّر مستوى الخطر، ثم تستلم دورك في يوم المحاكاة.</p>
+<div class="meta"><span>60 دقيقة</span><span>الأسبوع 9</span><span>الجلسة 1: الناس والحوادث</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="9.1">
+  <div class="box goal">
+    <h3>ستخرج من هذا المختبر بـ</h3>
+    <ul>
+      <li>مراجعة مخاطر لأداة بناها موظف: إشاراتها معادًا حسابها من سجل المناوبات، وسبب خطئها، ومستوى خطرها بالاحتمالية والأثر.</li>
+      <li>دورك في يوم المحاكاة الثاني، وثلاثة أسئلة تريد إجابتها أولًا.</li>
+    </ul>
+  </div>
+
+  <h2>ما تحتاجه</h2>
+  <div class="files">
+    <a href="files/incident/overtime_tool.md" target="_blank"><b>incident/overtime_tool.md</b><span>وصف الأداة كما كتبه صاحبها</span></a>
+    <a href="files/incident/shifts.csv" target="_blank"><b>incident/shifts.csv</b><span>سجل المناوبات: 240 مناوبة</span></a>
+    <a href="files/incident/tool_flags.csv" target="_blank"><b>incident/tool_flags.csv</b><span>إشارات الأداة</span></a>
+    <a href="files/incident/severity_scale.md" target="_blank"><b>incident/severity_scale.md</b><span>مصفوفة الخطر وسلم خطورة الحادثة</span></a>
+    <a href="files/incident/role_cards.md" target="_blank"><b>incident/role_cards.md</b><span>بطاقات الأدوار</span></a>
+    <a href="incident/recount.py" target="_blank"><b>incident/recount.py</b><span>إعادة حساب الإشارات</span></a>
+  </div>
+  <p class="small">أرقام السائقين في الملفات رموز اصطناعية، لا أرقام وظيفية حقيقية. سياسة الذكاء الاصطناعي: الذكاء الاصطناعي مرشدًا. الملفات اصطناعية ومصنفة «عام».</p>
+
+  <h2>الخطوات</h2>
+
+  <div class="step">
+    <h3>1 · اقرأ وصف أداة رصد العمل الإضافي <span class="min">8 د</span></h3>
+    <p>من بناها، وأين تعمل، وكيف تحسب، وما الذي يحدث بإشاراتها، وإلى من تُرسل. ضع خطًا تحت كل جملة تقلقك، واكتب لماذا.</p>
+  </div>
+
+  <div class="step">
+    <h3>2 · أعد حساب الإشارات من سجل المناوبات <span class="min">15 د</span></h3>
+    <pre class="code" data-file="الطرفية"><code>uv run labs/incident/recount.py --as-tool
+uv run labs/incident/recount.py</code></pre>
+    <p>الأول يحسب كما يقول وصف الأداة، والثاني يقسم ساعات المناوبة عند منتصف الليل. سجّل لكل منهما: أيام الإشارة، والسائقين، ومن يستحق إنذارًا.</p>
+    <table>
+      <tr><th>المقياس</th><th>كما تحسب الأداة</th><th>بالتقسيم عند منتصف الليل</th></tr>
+      <tr><td>أيام الإشارة</td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>السائقون الذين عليهم إشارة</td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>الإنذارات الكتابية</td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
+  </div>
+
+  <div class="step">
+    <h3>3 · حدّد سبب الإشارات الخاطئة <span class="min">10 د</span></h3>
+    <p>افتح <code>shifts.csv</code> واختر سائقًا أُنذر، واحسب ساعات أيامه بيدك. اكتب السبب في جملتين يفهمهما مدير غير تقني، ثم اكتب ما الذي لم يُفعل قبل الإطلاق فلم يُكتشف السبب.</p>
+  </div>
+
+  <div class="step">
+    <h3>4 · قدّر مستوى الخطر بالاحتمالية والأثر <span class="min">10 د</span></h3>
+    <p>بمصفوفة الإطار الوطني لإدارة مخاطر الذكاء الاصطناعي في <code>severity_scale.md</code>: الاحتمالية من 1 إلى 4 بدليل من إعادة الحساب، والأثر من 1 إلى 4 بما يحدث للسائقين، والمستوى ناتجهما. ثم اكتب أربعة أفعال تُتخذ الآن، ولكل فعل مالكه من بطاقات الأدوار.</p>
+  </div>
+
+  <div class="step">
+    <h3>5 · استلم دورك في المحاكاة واقرأ بطاقتك <span class="min">10 د</span></h3>
+    <p>يوزع المدرب الأدوار من <code>role_cards.md</code>. اقرأ ما يملكه دورك وما لا يملكه، وما يجب أن تعرفه من غيرك.</p>
+  </div>
+
+  <div class="step">
+    <h3>6 · اكتب ثلاثة أسئلة تريد إجابتها أولًا يوم المحاكاة <span class="min">7 د</span></h3>
+    <p>من موقع دورك: ما الذي لا تعرفه بعد، ومن يعرفه، ومتى تحتاج إليه؟ احتفظ بها لسجل القرارات.</p>
+  </div>
+
+  <div class="step stretch">
+    <h3>✱ إضافي</h3>
+    <p>اكتب الاختبار الذي كان سيكشف الخطأ قبل الإطلاق، ومن كان يجب أن يملكه.</p>
+  </div>
+
+  <h2>أسئلة تحقق</h2>
+  <ol class="checks">
+    <li>كم إنذارًا كتابيًا أُرسل، وكم منها يستحق بالحساب الصحيح؟</li>
+    <li>ما الدليل على الاحتمالية التي اخترتها؟</li>
+    <li>أي جملة في وصف الأداة لم تستطع أن تقدّر خطرها بعد، ولماذا؟</li>
+  </ol>
+
+  <details class="instructor">
+    <summary>للمدرّب: مفتاح المختبر</summary>
+    <ul>
+      <li><b>إعادة الحساب:</b> 240 مناوبة، و104 تعبر منتصف الليل. الأداة: 33 يوم إشارة لثلاثين سائقًا، وإنذار لثلاثة (DRV-007 وDRV-026 وDRV-029). بالتقسيم الصحيح: 21 يوم إشارة لواحد وعشرين سائقًا، ولا أحد عليه إشارتان: <b>الإنذارات الثلاثة كلها خاطئة</b>، وتسعة سائقين عليهم إشارة من الخطأ وحده.</li>
+      <li><b>السبب:</b> المناوبة العابرة لمنتصف الليل تُحسب كاملة مرة ثانية في اليوم التالي. مثال DRV-007 في اليوم 6: مناوبة بدأت 22 في اليوم 5 لعشر ساعات، ومناوبة تبدأ 21 في اليوم 6. الأداة تعدّ في اليوم 6 عشر ساعات ثم ثلاثًا (13، إشارة)، والصحيح ثمانٍ ثم ثلاث (11). إشارته في اليوم 2 صحيحة (17 ساعة)، فالإنذار جاء من إشارة اليوم 6. لم يُختبر على حالة حدية، ولم يراجعه غير كاتبه.</li>
+      <li><b>مستوى الخطر:</b> شبه مؤكد (4) × مرتفع (3) = 12، مرتفع. يُقبل 9 بتعليل. خطر ثانٍ لم يُقس: القائمة الأسبوعية بالبريد إلى قائمة لا يُعرف من فيها؛ من كتبه أحسن القراءة، وهو مدخل المحاكاة.</li>
+      <li><b>الأفعال الأربعة ومالكوها:</b> إيقاف مؤقت (رئيس المكتب مع المدير العام للتوزيع)، وتعليق الإنذارات (مدير الموارد البشرية)، ومعرفة من في القائمة البريدية (رئيس الأمن السيبراني)، وتسجيل الأداة ونقلها واختبارها (المالك من العمل، بقواعد القسم 6 من السياسة).</li>
+      <li><b>الإضافي:</b> اختبار على مناوبات تعبر منتصف الليل بنتائج محسوبة يدويًا، يملكه مالك العمل (المدير العام للتوزيع) ويراجعه غير كاتب الأداة.</li>
+      <li><b>فصل المهام:</b> المراجعة يجريها المكتب لا كاتب الأداة؛ وتعليق الإنذارات لمدير الموارد البشرية، والإيقاف المؤقت لرئيس المكتب مع مالك العمل؛ وكاتب الأداة لا يختبر إصلاحه وحده. مراجعة تترك كاتب الأداة يقرر مصيرها يُخصم منها.</li>
+      <li>المراجعة المرجعية: <code>labs/solutions/incident/risk_review_after_lab_9_1.md</code>، وهي ملف البداية في المحاكاة لمن لم يُكمل. التحقق: <code>uv run labs/solutions/check.py incident</code>.</li>
+    </ul>
+  </details>
+</article>
+<nav class="pager"><a href="W8_1_policy_coding_agent.html" rel="prev">→ المختبر السابق</a><a href="W10_1_incident_simulation.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · قيادة مكتب الذكاء الاصطناعي المؤسسي<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-25⁩ · الإيداع bab2612</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-25T01:30:04Z","version":"2027.1.0","commit":"bab2612"},"course":{"id":"lds-exe-401","code":"LDS-EXE-401","title":"قيادة مكتب الذكاء الاصطناعي المؤسسي","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-exe-401/","repo":"SDAIAAcademy/lds-exe-401","home":"../index.html"},"lab":{"id":"9.1","title":"قبل المحاكاة: مراجعة مخاطر أداة بناها موظف","summary":"تراجع أداة لرصد العمل الإضافي بناها مشرف في شركة التوزيع: تعيد حساب إشاراتها من سجل المناوبات، وتحدد سبب الخطأ، وتقدّر مستوى الخطر، ثم تستلم دورك في يوم المحاكاة.","minutes":60,"day":9,"unit":"الأسبوع 9","session":1,"deck":"../slides/week9.html#lab-9-1","prev":"W8_1_policy_coding_agent.html","next":"W10_1_incident_simulation.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

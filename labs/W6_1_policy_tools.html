@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 6.1 · اختبار السياسة (1): الأدوات وقواعد البيانات · قيادة مكتب الذكاء الاصطناعي المؤسسي</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="W6_1_policy_tools.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/week6.html#lab-6-1">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 6.1</span>
+<h1>اختبار السياسة (1): الأدوات وقواعد البيانات</h1>
+<p>تقرأ قائمة عشرة طلبات أدوات، وتصنّف بياناتها، وتكتب قسم الأدوات المعتمدة وقاعدة البيانات، وتحسم السيناريوهات الثلاثة الأولى من ثمانية.</p>
+<div class="meta"><span>60 دقيقة</span><span>الأسبوع 6</span><span>الجلسة 1: ما يدخل الأداة وما لا يدخلها</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="6.1">
+  <div class="box goal">
+    <h3>ستخرج من هذا المختبر بـ</h3>
+    <ul>
+      <li>تصنيف لبيانات عشرة طلبات أدوات على المستويات الأربعة، وقرار لكل طلب.</li>
+      <li>الأقسام الأولى من سياسة المجموعة: النطاق، وفئات الأدوات المعتمدة، وطريق اعتماد أداة، وقاعدة البيانات؛ محسومًا بها ثلاثة سيناريوهات.</li>
+    </ul>
+  </div>
+
+  <h2>ما تحتاجه</h2>
+  <div class="files">
+    <a href="files/policy/tool_requests.csv" target="_blank"><b>policy/tool_requests.csv</b><span>عشرة طلبات أدوات</span></a>
+    <a href="files/policy/scenarios.md" target="_blank"><b>policy/scenarios.md</b><span>ثمانية سيناريوهات؛ اليوم 1 إلى 3</span></a>
+    <a href="files/case/group_brief.md" target="_blank"><b>case/group_brief.md</b><span>قاعدة المجموعة للبيانات</span></a>
+  </div>
+  <p class="small">لا برنامج في هذا المختبر: نص وجدول. اكتب السياسة في ملف <code>my_policy.md</code> تحتفظ به للمختبرين 7.1 و8.1. سياسة الذكاء الاصطناعي: الذكاء الاصطناعي مرشدًا. الملفات اصطناعية ومصنفة «عام».</p>
+
+  <h2>الخطوات</h2>
+
+  <div class="step">
+    <h3>1 · اقرأ قائمة طلبات الأدوات العشرة <span class="min">8 د</span></h3>
+    <p>لكل طلب: من يطلب، وأي نوع من الأدوات، ولأي غرض، وعلى أي بيانات، وأين تُستضاف الأداة. علّم الطلبات التي تبدو سهلة: ستعود إليها في الخطوة الأخيرة.</p>
+  </div>
+
+  <div class="step">
+    <h3>2 · صنّف بيانات كل طلب على المستويات الأربعة <span class="min">12 د</span></h3>
+    <table>
+      <tr><th>الطلب</th><th>تصنيف البيانات</th><th>فئة الأداة</th><th>القرار</th></tr>
+      <tr><td>TR01</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>TR02</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>TR03</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>TR04</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>TR05</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>TR06</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>TR07</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>TR08</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>TR09</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>TR10</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
+    <p>التصنيف: عام، أو مقيد، أو سري، أو سري للغاية. إن ترددت بين مستويين فاكتب الأعلى، ودوّن من يملك القرار فيه.</p>
+  </div>
+
+  <div class="step">
+    <h3>3 · اكتب قسم الأدوات المعتمدة وقاعدة البيانات <span class="min">15 د</span></h3>
+    <p>أربعة أقسام في <code>my_policy.md</code>: النطاق؛ وفئات الأدوات وما يدخل كل فئة من بيانات؛ وطريق اعتماد أداة جديدة (من يطلب، ومن يقرر، وكم يومًا)؛ وقاعدة البيانات بعبارة المبادئ كما هي في موجز الحالة، وامتداد المجموعة معلَّمًا أنه قاعدة المجموعة لا نص المبادئ.</p>
+  </div>
+
+  <div class="step">
+    <h3>4 · احسم السيناريوهات 1 إلى 3 بالسياسة وحدها <span class="min">15 د</span></h3>
+    <p>لكل سيناريو: مسموح، أو مسموح بشرط (اذكره)، أو غير مسموح؛ ورقم البند الذي حسمه. لا تحسم بما تعرفه خارج النص.</p>
+  </div>
+
+  <div class="step">
+    <h3>5 · سجّل أي سيناريو احتاج حكمًا خارج النص <span class="min">10 د</span></h3>
+    <p>إن احتجت إلى حكم لا يقوله النص، فالنص ناقص: اكتب البند الذي ينقص، وأضفه، وأعد حسم السيناريو به. ثم ارجع إلى الطلبات التي علّمتها سهلة في الخطوة الأولى: هل بقيت سهلة؟</p>
+  </div>
+
+  <div class="step stretch">
+    <h3>✱ إضافي</h3>
+    <p>أعد كتابة قاعدة البيانات في ثلاثة أسطر يفهمها موظف جديد، واختبرها على الطلب الأصعب في القائمة.</p>
+  </div>
+
+  <h2>أسئلة تحقق</h2>
+  <ol class="checks">
+    <li>هل في سياستك طلب على بيانات «عام» رفضته؟ لماذا؟</li>
+    <li>أين ميّزت في النص بين عبارة المبادئ وقاعدة المجموعة؟</li>
+    <li>من يصنّف البيانات في سياستك: الطالب، أم المكتب، أم مالك البيانات؟</li>
+  </ol>
+
+  <details class="instructor">
+    <summary>للمدرّب: مفتاح المختبر</summary>
+    <ul>
+      <li><b>التصنيف والقرار المرجعيان</b> (<code>labs/solutions/policy/policy_key.json</code>): TR01 عام، مسموح بشرط اعتماد الأداة؛ TR02 مقيد على الأقل، غير مسموح (الأداة تشتريها المجموعة، والامتداد يشملها)؛ TR03 مقيد، غير مسموح؛ TR04 مقيد، مسموح بشرط (غير توليدي عبر المحفظة)؛ TR05 سري، غير مسموح؛ TR06 عام، مسموح؛ TR07 سري، غير مسموح؛ TR08 عام، مسموح بشرط اعتماد الخدمة؛ TR09 مقيد، غير مسموح؛ TR10 مقيد، غير مسموح بصيغته (جهاز شخصي وأداة غير مسجلة: يعود في الأسابيع 8 إلى 10).</li>
+      <li><b>الفخ:</b> TR02 وTR09 على مساعد تشتريه المجموعة في مستأجر خاص بها. من يجيزهما لأن «البيانات لا تخرج» نسي امتداد المجموعة، والقاعدة عن التصنيف لا عن مكان الاستضافة.</li>
+      <li><b>السيناريوهات:</b> S1 غير مسموح بتلك الأداة لأنها غير معتمدة، ومسموح بأداة معتمدة (البيانات «عام» لا تكفي)؛ S2 غير مسموح (تقييمات الأداء، والامتداد)؛ S3 غير مسموح (اسم المستأجر ورقم وحدته؛ حذف الأسماء لا يغيّر التصنيف إلا بقرار المالك؛ البديل أداة غير توليدية).</li>
+      <li><b>النص المرجعي</b>: <code>labs/solutions/policy/policy_after_lab_6_1.md</code> (الأقسام 1 إلى 4). وهو ملف البداية للمختبر 7.1 لمن لم يُكمل.</li>
+      <li>تصنيفات المرجع هي حكم مالك البيانات في الحالة؛ يُقبل مستوى أعلى بتعليل. قاعدة التقدير في هذا المختبر: لا يُقبل «عام» لبيانات فيها أسماء أشخاص أو أرقامهم.</li>
+      <li><b>فصل المهام:</b> تصنيف البيانات لمالكها لا لطالب الأداة؛ واعتماد الأداة غير طلبها، فمن طلب أداة لا يعتمدها. سياسة تترك الطالب يصنّف بياناته ويعتمد أداته يُخصم منها.</li>
+    </ul>
+  </details>
+</article>
+<nav class="pager"><a href="W5_1_portfolio_committee.html" rel="prev">→ المختبر السابق</a><a href="W7_1_policy_permissions.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · قيادة مكتب الذكاء الاصطناعي المؤسسي<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-25⁩ · الإيداع bab2612</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-25T01:30:04Z","version":"2027.1.0","commit":"bab2612"},"course":{"id":"lds-exe-401","code":"LDS-EXE-401","title":"قيادة مكتب الذكاء الاصطناعي المؤسسي","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-exe-401/","repo":"SDAIAAcademy/lds-exe-401","home":"../index.html"},"lab":{"id":"6.1","title":"اختبار السياسة (1): الأدوات وقواعد البيانات","summary":"تقرأ قائمة عشرة طلبات أدوات، وتصنّف بياناتها، وتكتب قسم الأدوات المعتمدة وقاعدة البيانات، وتحسم السيناريوهات الثلاثة الأولى من ثمانية.","minutes":60,"day":6,"unit":"الأسبوع 6","session":1,"deck":"../slides/week6.html#lab-6-1","prev":"W5_1_portfolio_committee.html","next":"W7_1_policy_permissions.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

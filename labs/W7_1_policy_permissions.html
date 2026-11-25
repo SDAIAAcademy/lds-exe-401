@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 7.1 · اختبار السياسة (2): مصفوفة الصلاحيات · قيادة مكتب الذكاء الاصطناعي المؤسسي</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="W7_1_policy_permissions.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/week7.html#lab-7-1">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 7.1</span>
+<h1>اختبار السياسة (2): مصفوفة الصلاحيات</h1>
+<p>تملأ مصفوفة صلاحيات لأربعة وكلاء في المجموعة، وتحدد نقاط الموافقة ومالكي التقييم، وتحسم السيناريوهات 4 إلى 6.</p>
+<div class="meta"><span>60 دقيقة</span><span>الأسبوع 7</span><span>الجلسة 1: صلاحية بقدر الأثر، وتقييم يملكه العمل</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="7.1">
+  <div class="box goal">
+    <h3>ستخرج من هذا المختبر بـ</h3>
+    <ul>
+      <li>مصفوفة صلاحيات لأربعة وكلاء في المجموعة: مستوى كل فعل، وحده، ومن يوافق عليه، ومالك حزمة تقييمه وحدها الأدنى، يفحصها البرنامج.</li>
+      <li>القسم الخامس من السياسة، محسومًا به السيناريوهات 4 إلى 6.</li>
+    </ul>
+  </div>
+
+  <h2>ما تحتاجه</h2>
+  <div class="files">
+    <a href="files/policy/agents.csv" target="_blank"><b>policy/agents.csv</b><span>الوكلاء الأربعة ومالكوهم</span></a>
+    <a href="files/policy/permission_levels.md" target="_blank"><b>policy/permission_levels.md</b><span>المستويات ص0 إلى ص4 والقاعدتان الثابتتان</span></a>
+    <a href="files/policy/permission_matrix_template.csv" target="_blank"><b>policy/permission_matrix_template.csv</b><span>قالب المصفوفة</span></a>
+    <a href="files/policy/scenarios.md" target="_blank"><b>policy/scenarios.md</b><span>اليوم السيناريوهات 4 إلى 6</span></a>
+    <a href="files/policy/fallback/policy_after_lab_6_1.md" target="_blank"><b>policy/fallback/policy_after_lab_6_1.md</b><span>سياسة بديلة لمن لم يُكمل المختبر 6.1</span></a>
+    <a href="policy/matrix_check.py" target="_blank"><b>policy/matrix_check.py</b><span>فاحص المصفوفة</span></a>
+  </div>
+  <p class="small">سياسة الذكاء الاصطناعي: الذكاء الاصطناعي مرشدًا. الملفات اصطناعية ومصنفة «عام».</p>
+
+  <h2>الخطوات</h2>
+
+  <div class="step">
+    <h3>1 · ابدأ من سياستك أو من ملف البداية <span class="min">5 د</span></h3>
+    <p>افتح <code>my_policy.md</code> من المختبر 6.1، أو انسخ <code>fallback/policy_after_lab_6_1.md</code> إليه. ثم انسخ <code>permission_matrix_template.csv</code> إلى <code>labs/files/policy/my_matrix.csv</code>.</p>
+  </div>
+
+  <div class="step">
+    <h3>2 · املأ مصفوفة الصلاحيات للوكلاء الأربعة <span class="min">15 د</span></h3>
+    <p>لكل فعل من الأفعال العشرة: المستوى من ص0 إلى ص3 بحسب أثر الفعل لا بحسب ثقتك بالنموذج، والحد إن كان المستوى ص3. اسأل لكل فعل: هل يخرج من المجموعة؟ هل يُعاد إن أخطأ؟ هل يمس مالًا أو وعدًا لعميل أو موردًا؟</p>
+  </div>
+
+  <div class="step">
+    <h3>3 · حدّد نقاط الموافقة البشرية ومن يوافق <span class="min">10 د</span></h3>
+    <p>لكل فعل في ص2 أو ص3: دور الموافِق. ثم شغّل الفاحص، وصحّح حتى لا يكتب «problem»:</p>
+    <pre class="code" data-file="الطرفية"><code>uv run labs/policy/matrix_check.py labs/files/policy/my_matrix.csv</code></pre>
+  </div>
+
+  <div class="step">
+    <h3>4 · سمِّ مالك حزمة التقييم لكل وكيل وحدها الأدنى <span class="min">10 د</span></h3>
+    <p>المالك من وحدة العمل التي تعرف الإجابة الصحيحة، والحد الأدنى رقم يُقاس على الحزمة قبل التشغيل وبعد كل تغيير. أعد تشغيل الفاحص.</p>
+  </div>
+
+  <div class="step">
+    <h3>5 · احسم السيناريوهات 4 إلى 6 <span class="min">15 د</span></h3>
+    <p>بالسياسة والمصفوفة وحدهما: مسموح، أو مسموح بشرط، أو غير مسموح؛ والبند أو سطر المصفوفة الذي حسمه.</p>
+  </div>
+
+  <div class="step">
+    <h3>6 · سجّل التعديلات على السياسة <span class="min">5 د</span></h3>
+    <p>أضف إلى <code>my_policy.md</code> قسمًا خامسًا عن صلاحيات الوكلاء وملكية التقييم، يشير إلى المصفوفة، وسجّل ما غيّرته في الأقسام السابقة ولماذا.</p>
+  </div>
+
+  <div class="step stretch">
+    <h3>✱ إضافي</h3>
+    <p>اكتب ما يحدث لصلاحيات وكيل إذا انخفضت نسبة نجاحه في حزمة التقييم تحت الحد، ومن يقرر عودتها.</p>
+  </div>
+
+  <h2>أسئلة تحقق</h2>
+  <ol class="checks">
+    <li>هل في مصفوفتك فعل يوافق عليه مالك الوكيل نفسه؟</li>
+    <li>أي فعل منحته ص3، وما الحد، ومن يراجع العينة؟</li>
+    <li>من يملك حزمة تقييم وكيل البرمجة، وهل هو من يبني الوكيل؟</li>
+  </ol>
+
+  <details class="instructor">
+    <summary>للمدرّب: مفتاح المختبر</summary>
+    <ul>
+      <li><b>المصفوفة المرجعية</b> (<code>labs/solutions/policy/permission_matrix_reference.csv</code>، والفاحص يقول «no fixed rule broken»): A1 قراءة السياسة وحساب المبلغ ص0؛ تنفيذ رد المبلغ ص3 حتى 500 ريال، وما فوقه بموافقة مشرف خدمة العملاء. A2 كتابة الوصف ص1، والنشر ص2 بموافقة محرر المحتوى. A3 كتابة الإجابة ص1، والإرسال ص2 بموافقة أمين لجنة المناقصات. A4 كتابة الشيفرة ص1، وطلب الدمج ص1 يراجعه مطور غير طالب التغيير، والنشر في الإنتاج ص2 بموافقة مدير الإصدارات.</li>
+      <li><b>مالكو التقييم:</b> مالك العمل لكل وكيل (مدير خدمة العملاء، ومدير المتجر الإلكتروني، ومدير المشتريات، ورئيس تقنية المعلومات)، لا من يبني الوكيل؛ والموافِق ليس المالك.</li>
+      <li><b>السيناريوهات:</b> S4 مسموح بشرط: ص3 بحد 500، ومراجعة عينة يومية، وحزمة فوق حدها (85% وصفر مبالغ زائدة). S5 غير مسموح: الإرسال ص2 بموافقة غير المالك، والإجابة تُنشر لكل الموردين. S6 غير مسموح: مدة الضمان وعد للعميل، والنشر ص2 بموافقة المحرر.</li>
+      <li><b>الفخ:</b> من يمنح ص3 لرد المبلغ بحد 2,000 لأن السياسة المنشورة للعملاء تذكر 2,000 خلط بين ما يحتاج إلى موافقة المشرف للعميل وما يُسمح للوكيل وحده. يُقبل حد أعلى من 500 إن عُلل بحزمة التقييم.</li>
+      <li><b>الإضافي:</b> تنزل الصلاحية درجة (ص3 إلى ص2) حتى يعود النجاح فوق الحد بتشغيل جديد؛ يقرر العودة مالك التقييم بالنتيجة، ويُسجَّل في السجل.</li>
+      <li><b>فصل المهام:</b> في كل سطر الموافِق غير مالك الوكيل وغير بانيه، ومالك التقييم من العمل لا من بنى الوكيل؛ والفاحص يكشف الأول وحده. مصفوفة يوافق فيها المالك على أفعال وكيله يُخصم منها.</li>
+      <li>النص المرجعي: <code>labs/solutions/policy/policy_after_lab_7_1.md</code>. التحقق: <code>uv run labs/solutions/check.py policy</code>.</li>
+    </ul>
+  </details>
+</article>
+<nav class="pager"><a href="W6_1_policy_tools.html" rel="prev">→ المختبر السابق</a><a href="W8_1_policy_coding_agent.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · قيادة مكتب الذكاء الاصطناعي المؤسسي<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-25⁩ · الإيداع bab2612</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-25T01:30:04Z","version":"2027.1.0","commit":"bab2612"},"course":{"id":"lds-exe-401","code":"LDS-EXE-401","title":"قيادة مكتب الذكاء الاصطناعي المؤسسي","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-exe-401/","repo":"SDAIAAcademy/lds-exe-401","home":"../index.html"},"lab":{"id":"7.1","title":"اختبار السياسة (2): مصفوفة الصلاحيات","summary":"تملأ مصفوفة صلاحيات لأربعة وكلاء في المجموعة، وتحدد نقاط الموافقة ومالكي التقييم، وتحسم السيناريوهات 4 إلى 6.","minutes":60,"day":7,"unit":"الأسبوع 7","session":1,"deck":"../slides/week7.html#lab-7-1","prev":"W6_1_policy_tools.html","next":"W8_1_policy_coding_agent.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

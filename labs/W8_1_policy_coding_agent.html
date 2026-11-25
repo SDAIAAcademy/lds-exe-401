@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 8.1 · اختبار السياسة (3): وكيل البرمجة وإصدار النموذج · قيادة مكتب الذكاء الاصطناعي المؤسسي</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="W8_1_policy_coding_agent.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/week8.html#lab-8-1">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 8.1</span>
+<h1>اختبار السياسة (3): وكيل البرمجة وإصدار النموذج</h1>
+<p>تكتب قواعد وكلاء البرمجة والأدوات التي يبنيها الموظفون ومراجعة الموردين، وتحسم السيناريوهين 7 و8، ثم تعيد اختبار السياسة والمصفوفة على السيناريوهات الثمانية كلها.</p>
+<div class="meta"><span>60 دقيقة</span><span>الأسبوع 8</span><span>الجلسة 1: ما يبنيه الموظفون وما يغيّره الموردون</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="8.1">
+  <div class="box goal">
+    <h3>ستخرج من هذا المختبر بـ</h3>
+    <ul>
+      <li>القسمان الأخيران من السياسة: وكلاء البرمجة والأدوات التي يبنيها الموظفون، ومراجعة المورد وإصدار النموذج.</li>
+      <li>سياسة ومصفوفة نهائيتان اختُبرتا على السيناريوهات الثمانية كلها، وسجل بما تعارض منها وكيف أُصلح.</li>
+    </ul>
+  </div>
+
+  <h2>ما تحتاجه</h2>
+  <div class="files">
+    <a href="files/policy/scenarios.md" target="_blank"><b>policy/scenarios.md</b><span>السيناريوهات الثمانية؛ اليوم 7 و8 ثم الكل</span></a>
+    <a href="files/policy/tool_requests.csv" target="_blank"><b>policy/tool_requests.csv</b><span>الطلبان TR05 وTR10</span></a>
+    <a href="files/policy/fallback/policy_after_lab_7_1.md" target="_blank"><b>policy/fallback/policy_after_lab_7_1.md</b><span>سياسة بديلة لمن لم يُكمل المختبر 7.1</span></a>
+    <a href="files/policy/fallback/permission_matrix_after_lab_7_1.csv" target="_blank"><b>policy/fallback/permission_matrix_after_lab_7_1.csv</b><span>مصفوفة بديلة</span></a>
+    <a href="policy/matrix_check.py" target="_blank"><b>policy/matrix_check.py</b><span>فاحص المصفوفة</span></a>
+  </div>
+  <p class="small">سياسة الذكاء الاصطناعي: الذكاء الاصطناعي مرشدًا. الملفات اصطناعية ومصنفة «عام».</p>
+
+  <h2>الخطوات</h2>
+
+  <div class="step">
+    <h3>1 · ابدأ من سياستك ومصفوفتك أو من ملفي البداية <span class="min">5 د</span></h3>
+    <p>افتح <code>my_policy.md</code> و<code>my_matrix.csv</code>، أو انسخ ملفي البداية إليهما. شغّل فاحص المصفوفة مرة لتتأكد أنها نظيفة قبل أن تبدأ.</p>
+  </div>
+
+  <div class="step">
+    <h3>2 · اكتب قواعد وكلاء البرمجة والأدوات التي يبنيها الموظفون <span class="min">12 د</span></h3>
+    <p>قسم سادس: أين تُسجَّل الأداة، ومن يملكها، وعلى أي مستودع وجهاز تعمل، وما البيانات المسموح بها في الاختبار، وأين تُحفظ الأسرار، ومن يراجع الشيفرة، وما الذي يُختبر قبل الإطلاق حين تمس الأداة أشخاصًا، ومن ينشر في الإنتاج. اختبره على TR05 وTR10.</p>
+  </div>
+
+  <div class="step">
+    <h3>3 · اكتب قاعدة مراجعة المورد وإصدار النموذج <span class="min">10 د</span></h3>
+    <p>قسم سابع: ما يحدث قبل التبديل إلى إصدار جديد، ومن يقرر التبديل، وما يحدث لصلاحيات الوكيل إذا لم يسمح المورد بتثبيت الإصدار، وما تطلبه في العقود الجديدة.</p>
+  </div>
+
+  <div class="step">
+    <h3>4 · احسم السيناريوهين 7 و8 <span class="min">13 د</span></h3>
+    <p>بالسياسة والمصفوفة وحدهما، ورقم البند أو سطر المصفوفة الذي حسم كلًا منهما.</p>
+  </div>
+
+  <div class="step">
+    <h3>5 · أعد اختبار السيناريوهات الثمانية على النسخة النهائية <span class="min">15 د</span></h3>
+    <table>
+      <tr><th>السيناريو</th><th>الحسم أول مرة</th><th>الحسم الآن</th><th>البند</th></tr>
+      <tr><td>S1</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>S2</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>S3</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>S4</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>S5</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>S6</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>S7</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>S8</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
+  </div>
+
+  <div class="step">
+    <h3>6 · أصلح أي تعارض وسجّله <span class="min">5 د</span></h3>
+    <p>إن تغيّر حسم سيناريو، أو حسمه بندان بنتيجتين، فأصلح النص وسجّل التعديل وسببه. شغّل الفاحص على المصفوفة النهائية.</p>
+  </div>
+
+  <div class="step stretch">
+    <h3>✱ إضافي</h3>
+    <p>اكتب سيناريو تاسعًا من جهتك تختلف فيه سياستك عن سياسة الضمران، وحدد أي النصين أصح لجهتك ولماذا.</p>
+  </div>
+
+  <h2>أسئلة تحقق</h2>
+  <ol class="checks">
+    <li>هل تمنع سياستك أداة مثل TR10، أم تجعلها تُسجَّل وتُراجع؟ وأيهما يقلل الأدوات الخفية؟</li>
+    <li>من يقرر التبديل إلى إصدار نموذج جديد في سياستك؟</li>
+    <li>أي سيناريو تغيّر حسمه بين الأسبوع 6 واليوم، ولماذا؟</li>
+  </ol>
+
+  <details class="instructor">
+    <summary>للمدرّب: مفتاح المختبر</summary>
+    <ul>
+      <li><b>القسم 6 المرجعي:</b> تسجيل كل أداة قبل أن تمس بيانات المجموعة أو قراراتها، ومالك من وحدة العمل؛ مستودعات وأجهزة المجموعة لا جهاز شخصي؛ لا بيانات إنتاج في الاختبار ولا أسرار في الشيفرة أو التعليمات؛ مراجعة من غير الكاتب، واختبار حالات حدية لما يمس أشخاصًا؛ النشر في الإنتاج بموافقة مدير الإصدارات.</li>
+      <li><b>القسم 7 المرجعي:</b> تثبيت إصدار كل وكيل في ص2 أو ص3؛ كل إصدار جديد على حزمة التقييم قبل التبديل، ومالك العمل يقرر؛ إن تعذر التثبيت ينزل الوكيل إلى ص1 حتى تنجح الحزمة؛ إشعار ثلاثين يومًا في العقود الجديدة.</li>
+      <li><b>S7:</b> غير مسموح؛ مستودع الرواتب سري والوكيل معتمد على المستودع التجريبي، والنشر في الإنتاج ص2 بموافقة مدير الإصدارات لا «إذا نجحت الاختبارات». <b>S8:</b> مسموح بشرط؛ يُثبَّت الإصدار ويُشغَّل الجديد على الحزمة قبل التبديل، وإلا ينزل وكيل الإرجاع إلى ص1 من تاريخ التبديل.</li>
+      <li><b>TR10:</b> القاعدة المرجعية لا تمنع ما يبنيه الموظفون، بل تُدخله السجل والمراجعة. هذه الأداة نفسها (رصد العمل الإضافي) موضوع المختبر 9.1 ويوم المحاكاة الثاني: لو طُبق القسم 6 لاختُبرت المناوبات التي تعبر منتصف الليل قبل الإطلاق.</li>
+      <li><b>فصل المهام:</b> طلب الدمج يراجعه مطور غير طالب التغيير، والنشر يوافق عليه مدير الإصدارات لا من كتب الشيفرة؛ وقرار التبديل إلى إصدار جديد لمالك العمل بنتيجة الحزمة، لا للمورد ولا لفريق التقنية. سياسة تجعل نجاح الاختبارات موافقة يُخصم منها.</li>
+      <li>النص النهائي المرجعي: <code>labs/solutions/policy/policy_final.md</code>، والمفتاح كاملًا في <code>policy_key.json</code>. التحقق: <code>uv run labs/solutions/check.py policy</code>.</li>
+    </ul>
+  </details>
+</article>
+<nav class="pager"><a href="W7_1_policy_permissions.html" rel="prev">→ المختبر السابق</a><a href="W9_1_model_risk_review.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · قيادة مكتب الذكاء الاصطناعي المؤسسي<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-25⁩ · الإيداع bab2612</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-25T01:30:04Z","version":"2027.1.0","commit":"bab2612"},"course":{"id":"lds-exe-401","code":"LDS-EXE-401","title":"قيادة مكتب الذكاء الاصطناعي المؤسسي","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-exe-401/","repo":"SDAIAAcademy/lds-exe-401","home":"../index.html"},"lab":{"id":"8.1","title":"اختبار السياسة (3): وكيل البرمجة وإصدار النموذج","summary":"تكتب قواعد وكلاء البرمجة والأدوات التي يبنيها الموظفون ومراجعة الموردين، وتحسم السيناريوهين 7 و8، ثم تعيد اختبار السياسة والمصفوفة على السيناريوهات الثمانية كلها.","minutes":60,"day":8,"unit":"الأسبوع 8","session":1,"deck":"../slides/week8.html#lab-8-1","prev":"W7_1_policy_permissions.html","next":"W9_1_model_risk_review.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

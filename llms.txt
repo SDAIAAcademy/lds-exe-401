@@ -1,0 +1,53 @@
+# قيادة مكتب الذكاء الاصطناعي المؤسسي
+
+> تقود مكتب الذكاء الاصطناعي بخطة واحدة: خارطة طريق بموازنة، ومحفظة تموّل ما يثبت قيمته، وحوكمة للأدوات والوكلاء، واستجابة للحوادث لكل خطر فيها مالك مسمّى. مقرر من أكاديمية سدايا، الرمز LDS-EXE-401، الإصدار 2027.1.0، بالعربية.
+
+كل شريحة عنوان مثل "#### [day1#slide-id] العنوان": استشهد بالشرائح بهذا المعرّف، وكل استشهاد رابط (slides/day1.html#slide-id). هذه الملفات هي ما يراه المشارك: لا ملاحظات المدرّب فيها ولا مفاتيح الإجابة.
+
+## المقرر
+
+- [صفحة المقرر](https://sdaiaacademy.github.io/lds-exe-401/index.md): نظرة عامة ونواتج التعلم والجدول والمختبرات؛ الصفحة نفسها https://sdaiaacademy.github.io/lds-exe-401/index.html
+- [المقرر كاملًا](https://sdaiaacademy.github.io/lds-exe-401/llms-full.txt): كل وحدة وجلسة وشريحة في ملف واحد، نحو 27,936 من الوحدات النصية
+- [أسئلة التدريب](https://sdaiaacademy.github.io/lds-exe-401/practice.html): أسئلة تختبر بها نفسك، مع تعليل بعد كل إجابة
+
+## الشرائح
+
+- [الأسبوع 1: المكتب وتفويضه](https://sdaiaacademy.github.io/lds-exe-401/slides/week1.md): مكتب يُقاس بالقيمة لا بعدد المستخدمين، يبدأ بتفويض مكتوب وخط ارتباط إداري واضح، وبوكيل صغير تبنيه وتقيسه بنفسك؛ الجلسات: مكتب يُقاس بالقيمة لا بالتبني؛ الصفحة: https://sdaiaacademy.github.io/lds-exe-401/slides/week1.html؛ نحو 3,745 من الوحدات النصية
+- [الأسبوع 2: نموذج التشغيل وقراءة التشغيلين](https://sdaiaacademy.github.io/lds-exe-401/slides/week2.md): مركزي أو محور وأطراف أو اتحادي: نموذج التشغيل يتبع الهيكل والمخاطر، والتشغيل الثاني يُقرأ بالمقارنة لا بالانطباع؛ الجلسات: مركزي أم محور وأطراف أم اتحادي؛ الصفحة: https://sdaiaacademy.github.io/lds-exe-401/slides/week2.html؛ نحو 3,060 من الوحدات النصية
+- [الأسبوع 3: صلاحيات القرار وخارطة الطريق](https://sdaiaacademy.github.io/lds-exe-401/slides/week3.md): من يقرر ماذا بحسب الغموض والمخاطر، وبأي ترتيب تبني القدرات على مكونات إطار تبني الذكاء الاصطناعي؛ الجلسات: من يقرر، وبأي ترتيب؛ الصفحة: https://sdaiaacademy.github.io/lds-exe-401/slides/week3.html؛ نحو 2,744 من الوحدات النصية
+- [الأسبوع 4: البوابات والموازنة](https://sdaiaacademy.github.io/lds-exe-401/slides/week4.md): تُموَّل المرحلة التالية بدليل المرحلة السابقة، وللموازنة ثلاثة أبواب: البناء والتشغيل والإيقاف؛ الجلسات: موّل ما يثبت، وأوقف ما لا يثبت؛ الصفحة: https://sdaiaacademy.github.io/lds-exe-401/slides/week4.html؛ نحو 2,461 من الوحدات النصية
+- [الأسبوع 5: يوم المحاكاة الأول: لجنة المحفظة](https://sdaiaacademy.github.io/lds-exe-401/slides/week5.md): يوم كامل: القيمة مربوطة بالحسابات عبر التكلفة لكل نتيجة ناجحة، ولجنة تموّل خمس حالات وتوقف واحدة؛ الجلسات: لجنة المحفظة؛ الصفحة: https://sdaiaacademy.github.io/lds-exe-401/slides/week5.html؛ نحو 2,536 من الوحدات النصية
+- [الأسبوع 6: الأدوات المعتمدة وقواعد البيانات](https://sdaiaacademy.github.io/lds-exe-401/slides/week6.md): قائمة أدوات معتمدة وقاعدة بيانات واحدة يفهمها الجميع: لا يدخل أداة توليدية إلا ما صُنّف «عام»؛ الجلسات: ما يدخل الأداة وما لا يدخلها؛ الصفحة: https://sdaiaacademy.github.io/lds-exe-401/slides/week6.html؛ نحو 2,464 من الوحدات النصية
+- [الأسبوع 7: صلاحيات الوكلاء وملكية التقييم](https://sdaiaacademy.github.io/lds-exe-401/slides/week7.md): صلاحية الوكيل بقدر أثر فعله، والموافقة البشرية حيث يُحدث الفعل أثرًا، وحزمة التقييم تملكها وحدات الأعمال؛ الجلسات: صلاحية بقدر الأثر، وتقييم يملكه العمل؛ الصفحة: https://sdaiaacademy.github.io/lds-exe-401/slides/week7.html؛ نحو 2,163 من الوحدات النصية
+- [الأسبوع 8: وكلاء البرمجة والأدوات التي يبنيها الموظفون والموردون](https://sdaiaacademy.github.io/lds-exe-401/slides/week8.md): ما يبنيه الموظفون بوكلاء البرمجة يدخل السجل والمراجعة، وكل إصدار جديد من المورد يمر بحزمة التقييم قبل التبديل؛ الجلسات: ما يبنيه الموظفون وما يغيّره الموردون؛ الصفحة: https://sdaiaacademy.github.io/lds-exe-401/slides/week8.html؛ نحو 2,358 من الوحدات النصية
+- [الأسبوع 9: الإلمام وحماية الخبرة، والإشراف على الحوادث](https://sdaiaacademy.github.io/lds-exe-401/slides/week9.md): إلمام بحسب الدور لا دورة واحدة للجميع، وخبرة تُحمى من التآكل، وحادثة لها مالك وسلم خطورة ومراجعة لمخاطر النموذج؛ الجلسات: الناس والحوادث؛ الصفحة: https://sdaiaacademy.github.io/lds-exe-401/slides/week9.html؛ نحو 2,391 من الوحدات النصية
+- [الأسبوع 10: يوم المحاكاة الثاني: الحادثة والجهة المختصة](https://sdaiaacademy.github.io/lds-exe-401/slides/week10.md): يوم كامل: التعامل مع الجهة المختصة وتقارير مجلس الإدارة، ثم محاكاة لحادثة واستفسار بمدخلات مباشرة، وانطلاق المشروع الختامي؛ الجلسات: حادثة واستفسار من الجهة المختصة؛ الصفحة: https://sdaiaacademy.github.io/lds-exe-401/slides/week10.html؛ نحو 2,513 من الوحدات النصية
+- [المناقشة الختامية: الدفاع عن خطة المكتب أمام اللجنة](https://sdaiaacademy.github.io/lds-exe-401/slides/capstone.md): خطة لا تتجاوز 15 صفحة، ومناقشة مدتها 30 دقيقة: 12 للعرض و18 لأسئلة لم يرها المشارك، أمام تنفيذي وأخصائي في الحوكمة ومهندس؛ الصفحة: https://sdaiaacademy.github.io/lds-exe-401/slides/capstone.html؛ نحو 1,234 من الوحدات النصية
+
+## المختبرات
+
+- [المختبر 1.1: ابنِ مسار العمل وسجّل التشغيل الأول](https://sdaiaacademy.github.io/lds-exe-401/labs/W1_1_agent_run1.md): الأسبوع 1، الجلسة 1، 60 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/lds-exe-401/labs/W1_1_agent_run1.html
+- [المختبر 2.1: غيّر شيئًا واحدًا وسجّل التشغيل الثاني](https://sdaiaacademy.github.io/lds-exe-401/labs/W2_1_agent_run2.md): الأسبوع 2، الجلسة 1، 60 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/lds-exe-401/labs/W2_1_agent_run2.html
+- [المختبر 3.1: خارطة الطريق (1): الآفاق والمراحل والتبعيات](https://sdaiaacademy.github.io/lds-exe-401/labs/W3_1_roadmap_horizons.md): الأسبوع 3، الجلسة 1، 60 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/lds-exe-401/labs/W3_1_roadmap_horizons.html
+- [المختبر 4.1: خارطة الطريق (2): بنود الموازنة السنوية](https://sdaiaacademy.github.io/lds-exe-401/labs/W4_1_roadmap_budget.md): الأسبوع 4، الجلسة 1، 60 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/lds-exe-401/labs/W4_1_roadmap_budget.html
+- [المختبر 5.1: محاكاة لجنة المحفظة](https://sdaiaacademy.github.io/lds-exe-401/labs/W5_1_portfolio_committee.md): الأسبوع 5، الجلسة 1، 180 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/lds-exe-401/labs/W5_1_portfolio_committee.html
+- [المختبر 6.1: اختبار السياسة (1): الأدوات وقواعد البيانات](https://sdaiaacademy.github.io/lds-exe-401/labs/W6_1_policy_tools.md): الأسبوع 6، الجلسة 1، 60 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/lds-exe-401/labs/W6_1_policy_tools.html
+- [المختبر 7.1: اختبار السياسة (2): مصفوفة الصلاحيات](https://sdaiaacademy.github.io/lds-exe-401/labs/W7_1_policy_permissions.md): الأسبوع 7، الجلسة 1، 60 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/lds-exe-401/labs/W7_1_policy_permissions.html
+- [المختبر 8.1: اختبار السياسة (3): وكيل البرمجة وإصدار النموذج](https://sdaiaacademy.github.io/lds-exe-401/labs/W8_1_policy_coding_agent.md): الأسبوع 8، الجلسة 1، 60 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/lds-exe-401/labs/W8_1_policy_coding_agent.html
+- [المختبر 9.1: قبل المحاكاة: مراجعة مخاطر أداة بناها موظف](https://sdaiaacademy.github.io/lds-exe-401/labs/W9_1_model_risk_review.md): الأسبوع 9، الجلسة 1، 60 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/lds-exe-401/labs/W9_1_model_risk_review.html
+- [المختبر 10.1: محاكاة الحادثة والجهة المختصة](https://sdaiaacademy.github.io/lds-exe-401/labs/W10_1_incident_simulation.md): الأسبوع 10، الجلسة 1، 180 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/lds-exe-401/labs/W10_1_incident_simulation.html
+
+## ملفات السياق
+
+- [context/course.md](https://sdaiaacademy.github.io/lds-exe-401/context/course.md): المقرر كاملًا، لمساعد يقبل ملفًا مرفقًا، نحو 27,936 من الوحدات النصية
+- [context/week1.md](https://sdaiaacademy.github.io/lds-exe-401/context/week1.md): الأسبوع 1، نحو 3,745 من الوحدات النصية
+- [context/week2.md](https://sdaiaacademy.github.io/lds-exe-401/context/week2.md): الأسبوع 2، نحو 3,060 من الوحدات النصية
+- [context/week3.md](https://sdaiaacademy.github.io/lds-exe-401/context/week3.md): الأسبوع 3، نحو 2,744 من الوحدات النصية
+- [context/week4.md](https://sdaiaacademy.github.io/lds-exe-401/context/week4.md): الأسبوع 4، نحو 2,461 من الوحدات النصية
+- [context/week5.md](https://sdaiaacademy.github.io/lds-exe-401/context/week5.md): الأسبوع 5، نحو 2,536 من الوحدات النصية
+- [context/week6.md](https://sdaiaacademy.github.io/lds-exe-401/context/week6.md): الأسبوع 6، نحو 2,464 من الوحدات النصية
+- [context/week7.md](https://sdaiaacademy.github.io/lds-exe-401/context/week7.md): الأسبوع 7، نحو 2,163 من الوحدات النصية
+- [context/week8.md](https://sdaiaacademy.github.io/lds-exe-401/context/week8.md): الأسبوع 8، نحو 2,358 من الوحدات النصية
+- [context/week9.md](https://sdaiaacademy.github.io/lds-exe-401/context/week9.md): الأسبوع 9، نحو 2,391 من الوحدات النصية
+- [context/week10.md](https://sdaiaacademy.github.io/lds-exe-401/context/week10.md): الأسبوع 10، نحو 2,513 من الوحدات النصية
+- [context/capstone.md](https://sdaiaacademy.github.io/lds-exe-401/context/capstone.md): المناقشة الختامية، نحو 1,234 من الوحدات النصية

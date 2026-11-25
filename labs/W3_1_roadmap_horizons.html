@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="executives">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 3.1 · خارطة الطريق (1): الآفاق والمراحل والتبعيات · قيادة مكتب الذكاء الاصطناعي المؤسسي</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="W3_1_roadmap_horizons.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/week3.html#lab-3-1">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 3.1</span>
+<h1>خارطة الطريق (1): الآفاق والمراحل والتبعيات</h1>
+<p>تقرأ ملف نضج المجموعة على المكونات السبعة، وتوزع أربع عشرة مبادرة على ثلاثة آفاق، وترسم تبعياتها، وتكتب مراحلها الرئيسة.</p>
+<div class="meta"><span>60 دقيقة</span><span>الأسبوع 3</span><span>الجلسة 1: من يقرر، وبأي ترتيب</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="3.1">
+  <div class="box goal">
+    <h3>ستخرج من هذا المختبر بـ</h3>
+    <ul>
+      <li>ملف نضج للمجموعة بدرجة من الدليل لكل مكون من المكونات السبعة، بجانب درجة الاستبيان.</li>
+      <li>خارطة طريق بأربع عشرة مبادرة على ثلاثة آفاق، فيها شهر الإطلاق والتبعيات وسبب الترتيب، يفحصها البرنامج.</li>
+    </ul>
+  </div>
+
+  <h2>ما تحتاجه</h2>
+  <div class="files">
+    <a href="files/roadmap/maturity_profile.csv" target="_blank"><b>roadmap/maturity_profile.csv</b><span>المكونات السبعة ودرجة الاستبيان</span></a>
+    <a href="files/roadmap/evidence_notes.md" target="_blank"><b>roadmap/evidence_notes.md</b><span>اثنا عشر دليلًا</span></a>
+    <a href="files/roadmap/maturity_scale.md" target="_blank"><b>roadmap/maturity_scale.md</b><span>سلم النضج في المقرر (0 إلى 4)</span></a>
+    <a href="files/roadmap/initiatives.csv" target="_blank"><b>roadmap/initiatives.csv</b><span>أربع عشرة مبادرة بتكاليفها وتبعياتها</span></a>
+    <a href="files/roadmap/roadmap_template.csv" target="_blank"><b>roadmap/roadmap_template.csv</b><span>قالب خارطة الطريق</span></a>
+    <a href="files/case/board_draft_roadmap.csv" target="_blank"><b>case/board_draft_roadmap.csv</b><span>مسودة مجلس الإدارة</span></a>
+    <a href="roadmap/roadmap_check.py" target="_blank"><b>roadmap/roadmap_check.py</b><span>برنامج الفحص</span></a>
+  </div>
+  <p class="small">جدول بيانات يكفي لتعبئة الملفين؛ البرنامج للفحص وحده. سياسة الذكاء الاصطناعي: الذكاء الاصطناعي مرشدًا. الملفات اصطناعية ومصنفة «عام». سلم النضج من وضع المقرر: إطار تبني الذكاء الاصطناعي لا يحدد مستويات نضج.</p>
+
+  <h2>الخطوات</h2>
+
+  <div class="step">
+    <h3>1 · أعطِ كل مكون درجة من الدليل لا من الاستبيان <span class="min">10 د</span></h3>
+    <p>انسخ <code>maturity_profile.csv</code> إلى <code>my_maturity.csv</code> في المجلد نفسه. لكل مكون، اقرأ أدلته في <code>evidence_notes.md</code> واكتب درجة في العمود <code>evidence_score_0_4</code> بسلم المقرر. إذا خالف الدليلُ الاستبيانَ، فالدليل هو الدرجة.</p>
+  </div>
+
+  <div class="step">
+    <h3>2 · حدّد المكونات التي تقيّد ما بعدها <span class="min">8 د</span></h3>
+    <p>اكتب أدنى ثلاثة مكونات بالدليل، وأمام كل منها المبادرات في <code>initiatives.csv</code> التي تعتمد عليه. هذه هي القيود التي يجب أن تُبنى قبل الحالات.</p>
+  </div>
+
+  <div class="step">
+    <h3>3 · ضع المبادرات الأربع عشرة على الآفاق الثلاثة <span class="min">15 د</span></h3>
+    <p>انسخ <code>roadmap_template.csv</code> إلى <code>my_roadmap.csv</code>. لكل مبادرة: الأفق (1 للأشهر 1 إلى 12، و2 للأشهر 13 إلى 24، و3 للأشهر 25 إلى 36، أو شرطة لمبادرة تسقطها)، وشهر الإطلاق، والمَعلم الذي يثبت الإطلاق، وسبب الترتيب في جملة. ابدأ بشهور الإطلاق في <code>initiatives.csv</code>، وغيّرها حيث يقول ملف النضج ذلك.</p>
+  </div>
+
+  <div class="step">
+    <h3>4 · افحص التبعيات بالبرنامج <span class="min">12 د</span></h3>
+    <pre class="code" data-file="الطرفية"><code>uv run labs/roadmap/roadmap_check.py labs/files/roadmap/my_roadmap.csv</code></pre>
+    <p>البرنامج يقول هل خارطتك كاملة، وهل تنطلق أي مبادرة قبل ما تعتمد عليه. صحّح حتى يكتب «dependencies respected»، ثم سجّل كل تغيير صنعته ولماذا.</p>
+  </div>
+
+  <div class="step">
+    <h3>5 · قارن خارطتك بمسودة مجلس الإدارة <span class="min">10 د</span></h3>
+    <table>
+      <tr><th>البند في المسودة</th><th>أفقه في المسودة</th><th>أفقه في خارطتك</th><th>السبب من الدليل</th></tr>
+      <tr><td>التنبؤ بالطلب في المتاجر</td><td>الأول</td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>منصة البيانات وفهرس البيانات</td><td>الثاني</td><td class="fill"></td><td class="fill"></td></tr>
+      <tr><td>برنامج الإلمام للعاملين</td><td>الثالث</td><td class="fill"></td><td class="fill"></td></tr>
+    </table>
+  </div>
+
+  <div class="step">
+    <h3>6 · اكتب ثلاثة أسطر لمجلس الإدارة عن الفرق <span class="min">5 د</span></h3>
+    <p>ما الذي تغيّر عن مسودته، وما الذي يحصل عليه في السنة الأولى بدل ما طلبه، ومتى يحصل على ما طلبه.</p>
+  </div>
+
+  <div class="step stretch">
+    <h3>✱ إضافي</h3>
+    <p>أسقط مبادرة واحدة (اكتب شرطة في أفقها) وأعد الفحص: ما المبادرات التي تسقط معها بسبب التبعيات؟</p>
+  </div>
+
+  <h2>أسئلة تحقق</h2>
+  <ol class="checks">
+    <li>في أي مكون كان الفرق بين الاستبيان والدليل أكبر، وماذا غيّر ذلك في خارطتك؟</li>
+    <li>هل في خارطتك حالة تنطلق قبل البيانات التي تحتاج إليها؟</li>
+    <li>ما الذي ستقوله لمجلس الإدارة حين يسأل عن التنبؤ بالطلب في السنة الأولى؟</li>
+  </ol>
+
+  <details class="instructor">
+    <summary>للمدرّب: مفتاح المختبر</summary>
+    <ul>
+      <li><b>درجات الدليل المرجعية</b> (<code>labs/solutions/roadmap/maturity_reference.csv</code>): الاستراتيجية 2، والحوكمة 1، والبيانات 1 (الاستبيان 3: الفرق الأكبر)، والبنية التحتية 2، والقدرات البشرية 1، والتطبيقات 2، والأثر 0. تُقبل 1 للاستراتيجية إذا عللها المشارك بأن الهدف بلا مؤشر.</li>
+      <li><b>القيود:</b> البيانات (I09 وI10 وI12 وI14 تعتمد على I02)، والقدرات البشرية (I09 تعتمد على I06)، والأثر (I13 قبل أي توسيع).</li>
+      <li><b>الخارطة المرجعية</b> (<code>labs/solutions/roadmap/roadmap_after_lab_3_1.csv</code>): في الأفق الأول I01 وI02 وI03 وI04 وI05 وI06 وI07 وI11 وI13؛ وفي الثاني I08 وI09 وI10 وI12؛ وفي الثالث I14. شهور الإطلاق كما في <code>initiatives.csv</code>، والبرنامج يقول إن التبعيات محترمة.</li>
+      <li><b>مسودة المجلس:</b> التنبؤ بالطلب في الأفق الأول قبل منصة البيانات (الأفق الثاني) التي يعتمد عليها: ينتقل إلى الثاني (الشهر 20). المنصة تنتقل إلى الأول. الإلمام ينتقل من الثالث إلى الأول (الشهر 4).</li>
+      <li><b>الإضافي:</b> إسقاط I02 يُسقط I09 وI10 وI12 وI14 معه؛ إسقاط I07 يُسقط I08 فيبقى روبوت المحادثة القديم يعمل ويُدفع.</li>
+      <li>لا موازنة في هذا المختبر: تسعير الخارطة في المختبر 4.1. التحقق: <code>uv run labs/solutions/check.py roadmap</code>.</li>
+      <li><b>فصل المهام:</b> درجات الدليل يضعها المكتب من الوثائق، لا الوحدات التي قيّمت نفسها في الاستبيان؛ ونقل مبادرة بين الآفاق يعتمده المجلس بمسودة المكتب، لا مالك المبادرة وحده.</li>
+    </ul>
+  </details>
+</article>
+<nav class="pager"><a href="W2_1_agent_run2.html" rel="prev">→ المختبر السابق</a><a href="W4_1_roadmap_budget.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار التنفيذيين والقادة · قيادة مكتب الذكاء الاصطناعي المؤسسي<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-25⁩ · الإيداع bab2612</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-25T01:30:04Z","version":"2027.1.0","commit":"bab2612"},"course":{"id":"lds-exe-401","code":"LDS-EXE-401","title":"قيادة مكتب الذكاء الاصطناعي المؤسسي","track":"executives","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/lds-exe-401/","repo":"SDAIAAcademy/lds-exe-401","home":"../index.html"},"lab":{"id":"3.1","title":"خارطة الطريق (1): الآفاق والمراحل والتبعيات","summary":"تقرأ ملف نضج المجموعة على المكونات السبعة، وتوزع أربع عشرة مبادرة على ثلاثة آفاق، وترسم تبعياتها، وتكتب مراحلها الرئيسة.","minutes":60,"day":3,"unit":"الأسبوع 3","session":1,"deck":"../slides/week3.html#lab-3-1","prev":"W2_1_agent_run2.html","next":"W4_1_roadmap_budget.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>
