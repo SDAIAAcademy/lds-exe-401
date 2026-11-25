@@ -1,56 +1,213 @@
 <section class="slide title" id="title" data-auto="title">
-  <aside class="notes">REPLACE: الترحيب، والتعريف بنفسك، وسؤال للقاعة يضبط الإيقاع، وإيقاع اليوم</aside>
+  <aside class="notes"><p>يوم المحاكاة الثاني. اجمع القسم 9. الصباح (120 دقيقة): التعامل مع الجهة المختصة، والتقارير إلى مجلس الإدارة، وقواعد المحاكاة. ثم المحاكاة (180)، ثم كتلة التقييم (60). جهّز مدخلات المراحل الأربع من <code>labs/solutions/incident/injects_w10.md</code> مطبوعة.</p></aside>
 </section>
 
-<section class="slide" id="agenda" data-auto="agenda"></section>
+<section class="slide" id="agenda" data-auto="agenda">
+  <aside class="notes"><p>مراجعة ومراجعة المختبر 9.1 (20)، والرد على الجهة المختصة (40)، والتقارير إلى المجلس (35)، وقواعد المحاكاة وانطلاق المشروع الختامي (25)، ثم المحاكاة.</p></aside>
+</section>
+
+<section class="slide" id="review-week9" data-lo="LO6">
+  <div class="kicker">مراجعة الأسبوع 9</div>
+  <h2>ما مستوى الخطر هنا؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO6">
+    <p class="lead">أداة في شركة طيران افتراضية تحسب ساعات راحة الطواقم. الخطأ فيها يقع في كل رحلة تعبر يومين، وهي ثلث الرحلات، وقد يجعل طاقمًا متعبًا يطير. بمصفوفة الإطار الوطني لإدارة مخاطر الذكاء الاصطناعي، ما مستوى الخطر؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يجعل الاحتمالية نادرة، والخطأ يقع في كل رحلة تعبر يومين">نادر × كارثي = 4، متوسط</div>
+      <div class="opt" data-why="يخفض الأثر، وطيران طاقم متعب يمس السلامة">شبه مؤكد × متوسط = 8، مرتفع</div>
+      <div class="opt" data-why="الناتج 16 لا 12، والمستوى كارثي لا مرتفع">شبه مؤكد × كارثي = 12، مرتفع</div>
+      <div class="opt" data-ok>شبه مؤكد × كارثي = 16، كارثي</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> الخطأ يقع في كل حالة من نوعها (4)، والأثر سلامة أشخاص (4): 16، كارثي.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: د. ثلاث دقائق. في المحفظة: الكارثي لا يُموَّل؛ وهنا: يُوقف فورًا.</p></aside>
+</section>
+
+<section class="slide" id="debrief-9-1" data-lo="LO6">
+  <div class="kicker">ما أظهره المختبر 9.1</div>
+  <h2>الإنذارات الثلاثة كلها خاطئة، وسببها سطر واحد لم يُختبر</h2>
+  <div class="cols cols-2">
+    <table class="t small">
+      <tr><th>المقياس</th><th class="num">الأداة</th><th class="num">الصحيح</th></tr>
+      <tr><td>أيام الإشارة</td><td class="num">33</td><td class="num">21</td></tr>
+      <tr><td>سائقون عليهم إشارة</td><td class="num">30</td><td class="num">21</td></tr>
+      <tr><td>إنذارات كتابية</td><td class="num">3</td><td class="num">0</td></tr>
+    </table>
+    <ul class="bullets">
+      <li>المناوبة العابرة لمنتصف الليل تُحسب كاملة مرة ثانية</li>
+      <li>104 من 240 مناوبة تعبر منتصف الليل</li>
+      <li>شبه مؤكد × مرتفع = 12، مرتفع</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>15 دقيقة. اسأل: من كتب خطرًا ثانيًا عن القائمة البريدية؟ لا تقل ماذا سيحدث؛ قل فقط إن المحاكاة تبدأ من هنا.</p></aside>
+</section>
 
 <!-- الجلسة 1 -->
 
-<section class="slide section" id="s1" data-auto="section" data-session="1"></section>
-
-<section class="slide" id="s1-idea">
-  <div class="kicker">REPLACE: السؤال الذي تجيب عنه الشريحة</div>
-  <h2>REPLACE: فكرة واحدة في جملة</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: ست نقاط على الأكثر، كل منها فكرة تامة</li>
-      <li>REPLACE: أبرز العبارة الأساسية، والأرقام من تشغيل المختبر لا من الذاكرة</li>
-    </ul>
-    <div class="card c-teal"><h4>في دراسة الحالة</h4><p class="small mb0">REPLACE: اربط الفكرة بدراسة الحالة وبياناتها</p></div>
-  </div>
-  <div class="callout warn mt"><b>أين يقع الخطأ.</b> REPLACE: الخطأ الذي سيقع فيه المشاركون، وكيف يتعرفون عليه</div>
-  <aside class="notes">REPLACE: ما تقوله، والعرض الحي، والسؤال للقاعة، والخطأ الشائع وحلّه</aside>
+<section class="slide section" id="s1" data-auto="section" data-session="1">
+  <aside class="notes"><p>كتلتان قبل المحاكاة: الرد على الجهة المختصة، ثم التقارير إلى المجلس. ثم قواعد المحاكاة وانطلاق المشروع الختامي.</p></aside>
 </section>
 
-<section class="slide" id="s1-steps">
-  <div class="kicker">خطوة بخطوة</div>
-  <h2>REPLACE: عملية تظهر خطوة مع كل ضغطة</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: الاسم</b>REPLACE: ما يحدث أولًا</div>
-    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: الاسم</b>REPLACE: الجزء التالي</div>
-    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: الاسم</b>REPLACE: النتيجة</div>
+<section class="slide" id="regulator-reply" data-lo="LO6">
+  <div class="kicker">الرد على الجهة المختصة</div>
+  <h2>الوقائع المؤكدة وحدها، وما لا يُعرف معلنًا بموعده، ولكل التزام مالك</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>الوقائع</h4><p class="small mb0">ما حدث، ومتى علمت الجهة، وكم شخصًا، وأي بيانات.</p></div>
+    <div class="card c-amber"><h4>ما لا يُعرف</h4><p class="small mb0">يُكتب أنه غير معروف بعد، مع موعد المعرفة. لا تخمين.</p></div>
+    <div class="card c-purple"><h4>الالتزامات</h4><p class="small mb0">لكل التزام مالك ومدة. لا وعد بما لا يملكه أحد.</p></div>
   </div>
-  <div class="callout tip mt frag"><b>الخلاصة.</b> REPLACE: الجملة التي تبقى في الذاكرة</div>
-  <aside class="notes">اضغط مرة لكل خطوة، وقل ما تضيفه كل خطوة قبل ظهور التالية. REPLACE: المثال الذي تشرحه</aside>
+  <aside class="notes"><p>الرد يكتبه مسؤول حماية البيانات مع المستشار القانوني، ويراجعه قائد الحادثة. صوت واحد: مالك الأداة أو مدير المستودع لا يرد.</p></aside>
+</section>
+
+<section class="slide" id="reply-traps" data-lo="LO6">
+  <div class="kicker">ما يضعف الرد</div>
+  <h2>ثلاث جمل تبدو مطمئنة وتضعف الثقة حين يُكتشف ما وراءها</h2>
+  <table class="t small">
+    <tr><th>الجملة</th><th>ما المشكلة</th><th>البديل</th></tr>
+    <tr><td>«لم يُطّلع على البيانات»</td><td>لا يُعرف بعد</td><td>«لا نعرف بعد؛ نعرف في تاريخ كذا»</td></tr>
+    <tr><td>«خطأ فردي من موظف»</td><td>يخفي غياب المراجعة</td><td>«لم تكن الأداة مسجلة ولا مراجعة»</td></tr>
+    <tr><td>«لن يتكرر»</td><td>وعد بلا مالك</td><td>التزام بمالك ومدة</td></tr>
+  </table>
+  <aside class="notes"><p>الأمثلة عامة لا من الحالة. اسأل: أي جملة من الثلاث سمعتها في جهتك بعد حادثة؟</p></aside>
+</section>
+
+<section class="slide" id="which-text-incident" data-lo="LO6">
+  <div class="kicker">أي نص نافذ</div>
+  <h2>نظام حماية البيانات الشخصية ولائحته يُلزمان، والإطار الوطني لإدارة المخاطر يرشد</h2>
+  <div class="cols cols-2">
+    <div class="card c-navy"><h4>يُلزم</h4><p class="small mb0">نظام حماية البيانات الشخصية ولائحته التنفيذية: الإشعار عن التسرب، ومهلته، ومحتواه، وإشعار أصحاب البيانات.</p></div>
+    <div class="card c-teal"><h4>يرشد</h4><p class="small mb0">الإطار الوطني لإدارة مخاطر الذكاء الاصطناعي: مستوى الخطر، ورصد الحوادث وإدارة الاستجابة.</p></div>
+  </div>
+  <div class="callout note mt"><b>وما بينهما قاعدة الجهة:</b> سلم ح1 إلى ح3، ومن يُبلَّغ، والإحاطة. تُكتب باسمها.</div>
+  <aside class="notes"><p>«الجهة المختصة» مصطلح اللائحة. في المحاكاة يصل الاستفسار منها بخمسة أسئلة. لا تضع في الرد رمزًا أو رقم خطاب لم يصل إليك.</p></aside>
+</section>
+
+<section class="slide" id="check-reply" data-lo="LO6">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>أي جملة تصلح للرد؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO6">
+    <p class="lead">جهة افتراضية أرسلت بالخطأ ملفًا فيه أسماء 200 مستفيد إلى بريد خارجي. عرفت أن مستلمًا واحدًا من ثلاثة فتحه وحذفه، ولا تعرف بعد عن الآخرين. أي جملة تصلح للرد على الجهة المختصة؟</p>
+    <div class="opts">
+      <div class="opt" data-why="تقول ما لا تعرفه الجهة عن مستلمَين">«حُذف الملف ولم يطّلع عليه أحد»</div>
+      <div class="opt" data-ok>«فتحه مستلم واحد وأكد حذفه؛ ولا نعرف بعد حال المستلمَين الآخرين، ونعرفه خلال يومين»</div>
+      <div class="opt" data-why="يلوم شخصًا ويخفي السبب، ولا يجيب عن السؤال">«الخطأ فردي من موظف تمت محاسبته»</div>
+      <div class="opt" data-why="يؤجل الرد كله، والمهلة لا تنتظر اكتمال الصورة">«نرد بعد اكتمال التحقيق الداخلي»</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> وقائع مؤكدة، وما لا يُعرف معلن بموعده؛ لا طمأنة بلا دليل ولا تأجيل.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: ب. أربع دقائق. هذا نوع الجملة التي تحتاجها في المرحلة 3.</p></aside>
+</section>
+
+<section class="slide" id="board-briefing" data-lo="LO6 LO7">
+  <div class="kicker">التقارير إلى مجلس الإدارة</div>
+  <h2>إحاطة الحادثة صفحة واحدة: ما حدث، وما تقرر، وما يتغير</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>ما حدث</b>بالأرقام، دون تفاصيل تقنية</div>
+    <div class="arrow">←</div>
+    <div class="step c-cyan"><b>ما تقرر</b>ومن يملك كل قرار</div>
+    <div class="arrow">←</div>
+    <div class="step c-purple"><b>ما يتغير</b>في التفويض والسياسة والخطة</div>
+  </div>
+  <div class="callout warn mt"><b>لا لوم لشخص:</b> السؤال للمجلس عن النظام الذي سمح بالخطأ.</div>
+  <aside class="notes"><p>المجلس لا يحتاج إلى معرفة الخطأ في الشيفرة؛ يحتاج إلى معرفة لماذا لم يُكتشف قبل الإطلاق، وما تغيّر حتى لا يتكرر في أداة أخرى.</p></aside>
+</section>
+
+<section class="slide" id="regular-reporting" data-lo="LO7">
+  <div class="kicker">التقرير الدوري</div>
+  <h2>المجلس يسمع عن الذكاء الاصطناعي كل ربع، لا حين تقع حادثة فقط</h2>
+  <table class="t small">
+    <tr><th>البند</th><th>ما يقوله في صفحة</th></tr>
+    <tr><td>القيمة</td><td>الحالات الممولة، والتكلفة لكل نتيجة ناجحة، والقيمة في الحسابات</td></tr>
+    <tr><td>المحفظة</td><td>ما أُوقف وما أُعيد، ولماذا</td></tr>
+    <tr><td>المخاطر</td><td>الحالات المرتفعة، والوكلاء ومستوياتهم، والأدوات المسجلة</td></tr>
+    <tr><td>الحوادث</td><td>عددها ودرجاتها، وما تغيّر بسببها</td></tr>
+  </table>
+  <aside class="notes"><p>في الحالة: لجنة المراجعة والمخاطر لم تناقش أي نظام في ثمانية اجتماعات (الدليل E04). التقرير الدوري جزء من القسم 10 في الخطة.</p></aside>
+</section>
+
+<section class="slide" id="check-briefing" data-lo="LO6">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>أي إحاطة تصلح للمجلس؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO6">
+    <p class="lead">بعد حادثة في مستشفى افتراضي (أداة مواعيد أرسلت تذكيرات بأسماء مرضى إلى أرقام خاطئة)، طلب رئيس المجلس إحاطة في صفحة. أي مسودة أقرب إلى ما يحتاج إليه؟</p>
+    <div class="opts">
+      <div class="opt" data-ok>عدد المرضى والأرقام، والإشعار ومالكه، وما تغيّر في تسجيل الأدوات</div>
+      <div class="opt" data-why="تفاصيل تقنية بلا قرار ولا تغيير">شرح للخطأ في قاعدة بيانات الأرقام وكيف أُصلح</div>
+      <div class="opt" data-why="يلوم شخصًا، والمجلس يسأل عن النظام">اسم الموظف المسؤول والإجراء التأديبي المتخذ</div>
+      <div class="opt" data-why="يطمئن بلا أرقام ولا قرارات ولا مالكين">تأكيد أن الحادثة محدودة وأن كل شيء تحت السيطرة</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> المجلس يحتاج إلى الأرقام، والقرارات ومالكيها، وما تغيّر في النظام.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: أ. ثلاث دقائق.</p></aside>
+</section>
+
+<section class="slide" id="sim-rules" data-lo="LO6">
+  <div class="kicker">قواعد المحاكاة</div>
+  <h2>180 دقيقة، أربع مراحل، وساعة محاكاة تتقدم بين المراحل</h2>
+  <ul class="bullets">
+    <li>كل دور يقرر بحسب بطاقته وحدها، وقائد الحادثة يملك السجل</li>
+    <li>كل مرحلة تنتهي بسطر في السجل: ما عُرف، والقرار، والمالك، والمدة، والسبب، وما لم يُعرف</li>
+    <li>الوقت يُكتب بساعة المحاكاة كما يعلنها المدرب</li>
+    <li>المراقب لا يتدخل، ويقرأ ملاحظاته في استخلاص الدروس</li>
+  </ul>
+  <aside class="notes"><p>إن زاد العدد على ثمانية: فريقان متوازيان، والمدرب يقرأ المدخل نفسه للفريقين في الوقت نفسه. لا تساعد فريقًا متأخرًا؛ التأخر جزء مما يُلاحظ.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-10-1" data-auto="lab" data-lab="10.1">
-  <aside class="notes">REPLACE: ما تراقبه أثناء عمل المشاركين، والمشكلات المعتادة، والبديل لمن لم يُنهِ مختبرًا سابقًا</aside>
+  <aside class="notes"><p>180 دقيقة، والذكاء الاصطناعي مرشد. أعلن ساعة المحاكاة مع كل مدخل. اجمع سجل القرارات والرد والإحاطة من كل فريق قبل كتلة التقييم.</p></aside>
+</section>
+
+<section class="slide" id="assessment-block" data-lo="LO6">
+  <div class="kicker">كتلة التقييم: 60 دقيقة بعد المحاكاة</div>
+  <h2>سجل القرارات والرد على الجهة المختصة، بقلم كل مشارك</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>تسلّم</h4><p class="small mb0">السجل بأسبابك، والرد بالقالب، في المجلد المشترك.</p></div>
+    <div class="card c-amber"><h4>الوضع</h4><p class="small mb0">الذكاء الاصطناعي مرشد: يسأل ويشرح، وأنت تكتب.</p></div>
+    <div class="card c-purple"><h4>التقدير</h4><p class="small mb0">مع ورقة المراقب وورقة لجنة الأسبوع 5: «المحاكاة تحت الملاحظة».</p></div>
+  </div>
+  <aside class="notes"><p>كل مشارك يكتب نسخته وإن اتُّخذت القرارات في الفريق: التقدير على الأسباب وعلى دقة الرد. القسم 10 من الخطة غير هذه الكتلة: القسم يصمم الطريقة، والكتلة تسجل يومًا.</p></aside>
+</section>
+
+<section class="slide" id="capstone-launch" data-lo="LO7">
+  <div class="kicker">انطلاق المشروع الختامي</div>
+  <h2>عشرة أقسام كتبتها، تصير خطة واحدة في 15 صفحة تدافع عنها أمام لجنة</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>التجميع</b>بإرشاد، والأرقام تقول الشيء نفسه</div>
+    <div class="arrow">←</div>
+    <div class="step c-cyan"><b>مراجعة الأقران</b>ومناقشة تجريبية</div>
+    <div class="arrow">←</div>
+    <div class="step c-purple"><b>المناقشة</b>12 دقيقة عرض و18 أسئلة</div>
+    <div class="arrow">←</div>
+    <div class="step c-amber"><b>بعد 60 يومًا</b>تقرير عن قرار واحد</div>
+  </div>
+  <aside class="notes"><p>اقرأ مع المشاركين معايير المناقشة في عرض المشروع الختامي وفي ملف المقرر. اتساق الأرقام أول ما تسأل عنه اللجنة: خارطة الطريق والمحفظة والموازنة.</p></aside>
+</section>
+
+<section class="slide" id="section-10-brief" data-lo="LO6 LO7">
+  <div class="kicker">القسم 10 من الخطة: دراسة ذاتية، 60 دقيقة</div>
+  <h2>صفحة ونصف: الحوادث والجهة المختصة ومجلس الإدارة</h2>
+  <ul class="bullets">
+    <li>سلم الخطورة، ومن يُبلَّغ، والأدوار ومسار التصعيد</li>
+    <li>الإشعار عن التسرب: من يقرر، ومن يكتب، ومتى تبدأ المهلة</li>
+    <li>التقرير الدوري إلى المجلس، وإحاطة الحادثة</li>
+    <li>ما غيّرته محاكاة اليوم في الأقسام الأخرى</li>
+  </ul>
+  <aside class="notes"><p>الذكاء الاصطناعي كامل في الصياغة، بنسخة غير سرية.</p></aside>
 </section>
 
 <section class="slide" id="wrap-up">
   <div class="kicker">خلاصة الأسبوع 10</div>
   <h2>ثلاثة أمور تبقى معك</h2>
   <div class="cols cols-3">
-    <div class="card c-teal"><h4>تذكّر</h4><p class="small mb0">REPLACE: فكرة يحتفظ بها المشاركون</p></div>
-    <div class="card c-coral"><h4>تذكّر</h4><p class="small mb0">REPLACE: فكرة يحتفظ بها المشاركون</p></div>
-    <div class="card c-purple"><h4>تذكّر</h4><p class="small mb0">REPLACE: فكرة يحتفظ بها المشاركون</p></div>
+    <div class="card c-teal"><h4>الوقائع وحدها</h4><p class="small mb0">وما لا يُعرف معلن بموعده.</p></div>
+    <div class="card c-coral"><h4>صوت واحد</h4><p class="small mb0">ولكل التزام مالك ومدة.</p></div>
+    <div class="card c-purple"><h4>المجلس كل ربع</h4><p class="small mb0">لا حين تقع الحادثة فقط.</p></div>
   </div>
+  <aside class="notes"><p>جملة من كل مشارك: ما أول سطر ستغيّره في خطتك بعد اليوم؟</p></aside>
 </section>
 
 <section class="slide dark" id="next" data-label="التالي">
   <div class="kicker">التالي</div>
-  <h2>المناقشة الختامية: REPLACE: عنوان المناقشة الختامية</h2>
-  <p class="lead">REPLACE: ما يجهزه المشاركون قبل ذلك، والمختبرات غير المكتملة يمكن إكمالها في المنزل</p>
-  <aside class="notes">REPLACE: الحسابات أو التثبيتات أو القراءة التي يحتاجها المشاركون قبل الوحدة التالية</aside>
+  <h2>المشروع الختامي: الدفاع عن خطة المكتب أمام اللجنة</h2>
+  <p class="lead">سلّم القسم 10. اجمع أقسامك العشرة في مجلدك المشترك، ومعها سجل استخدام الذكاء الاصطناعي.</p>
+  <aside class="notes"><p>جلسات التجميع المرشدة تبدأ الأسبوع القادم. القالب في <code>labs/files/case/plan_template.md</code>.</p></aside>
 </section>
