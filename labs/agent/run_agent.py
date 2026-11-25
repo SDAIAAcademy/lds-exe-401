@@ -19,7 +19,8 @@ LLM_API_KEY from your provider's own documentation, in the environment or in lab
 --stand-in, the runner uses the course's scripted stand-in: a few lines of code that imitate common
 failure modes of agents. Its results are a training scenario, not a measurement of any model.
 
-Output, in labs/agent/runs/<label>/: trace.jsonl (one event per line, for any trace viewer),
+Output, in labs/agent/runs/<label>/: trace.jsonl (one JSON event per line, shown by --view;
+sending it to a trace viewer such as Langfuse or Arize Phoenix needs that viewer's own library),
 results.csv (one line per task) and summary.json. Only the synthetic public files of the course are
 sent to a model. Never put real customer data in.
 """
