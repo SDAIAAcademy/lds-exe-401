@@ -14,7 +14,8 @@ its guards (start from labs/files/agent/workflow_start.json). The runner, not th
 budget and the approval point.
 
 With a hosted model: set LLM_BASE_URL (a standard chat-completions address), LLM_MODEL and
-LLM_API_KEY from your provider's own documentation (see .env.example). Without them, or with
+LLM_API_KEY from your provider's own documentation, in the environment or in labs/agent/.env (copy
+.env.example to .env and fill the three lines; .env is never committed). Without them, or with
 --stand-in, the runner uses the course's scripted stand-in: a few lines of code that imitate common
 failure modes of agents. Its results are a training scenario, not a measurement of any model.
 
@@ -39,6 +40,23 @@ try:
     sys.stdout.reconfigure(encoding='utf-8')
 except AttributeError:
     pass
+
+
+def load_dotenv(path):
+    """Reads KEY=VALUE lines from labs/agent/.env (copied from .env.example); variables already set win."""
+    if not path.exists():
+        return
+    for line in path.read_text(encoding='utf-8').splitlines():
+        line = line.strip()
+        if not line or line.startswith('#') or '=' not in line:
+            continue
+        k, v = line.split('=', 1)
+        k, v = k.strip(), v.strip().strip('"').strip("'")
+        if k and v and not os.environ.get(k):
+            os.environ[k] = v
+
+
+load_dotenv(HERE / '.env')
 
 # Assumed prices of the course, in riyals per million tokens: not any provider's price list.
 PRICE_IN = float(os.environ.get('PRICE_IN_SAR_PER_M', '1.50'))
